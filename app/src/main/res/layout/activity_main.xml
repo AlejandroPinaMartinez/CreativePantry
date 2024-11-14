@@ -1,19 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<!-- activity_main.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#FAF3DD"
+    android:padding="16dp">
 
+    <!-- Logo -->
+
+    <!-- Botón de Iniciar Sesión -->
+    <ImageView
+        android:layout_width="308dp"
+        android:layout_height="308dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/CreativePantry" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inicia Sesión"
+        android:backgroundTint="#4E7266"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Botón de Registrarse -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        android:backgroundTint="#4E7266"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Texto para continuar como invitado -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Continua como invitado..."
+        android:textColor="#4E7266"
+        android:layout_gravity="center"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Separador de texto -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O"
+        android:textColor="#4E7266"
+        android:layout_marginVertical="16dp"
+        android:layout_gravity="center"/>
+
+    <!-- Botones de inicio de sesión social -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continuar con Google"
+            android:backgroundTint="#4285F4"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continuar con Facebook"
+            android:backgroundTint="#3B5998"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continuar con Apple"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+</LinearLayout>
