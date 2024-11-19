@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:background="#FAF3DD">
 
-    <!-- Contenedor ScrollView para desplazamiento vertical -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,8 +26,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/logo_creative_pantry"
-                    android:contentDescription="@string/logo_description"
+                    android:src="@drawable/CreativePantry"
                     android:layout_marginEnd="8dp"/>
 
                 <TextView
@@ -36,24 +34,20 @@
                     android:layout_height="wrap_content"
                     android:text="Resultado filtrado por Ingredientes"
                     android:textSize="18sp"
-                    android:textColor="#4E7266"
-                    android:layout_marginEnd="auto"/>
+                    android:textColor="#4E7266"/>
 
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_filter"
-                    android:contentDescription="@string/filter_icon"/>
+                    android:src="@drawable/user"/>
             </LinearLayout>
 
-            <!-- Lista de recetas filtradas -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginTop="16dp">
 
-                <!-- Elemento individual de la lista de recetas -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -65,8 +59,7 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/img_recipe1"
-                        android:contentDescription="@string/recipe_image"/>
+                        android:src="@drawable/cookOllaa"
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -90,23 +83,17 @@
                             android:textSize="14sp"/>
                     </LinearLayout>
 
-                    <!-- Flecha de navegación -->
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@drawable/ic_arrow"
-                        android:contentDescription="@string/arrow_icon"
+                        android:src="@drawable/user"
                         android:layout_gravity="center"/>
                 </LinearLayout>
 
-                <!-- Añadir más elementos de receta de la misma manera aquí -->
-
-                <!-- Botón de cargar más -->
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_load_more"
-                    android:contentDescription="@string/load_more_icon"
+                    android:src="@drawable/user"
                     android:background="@null"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"/>
@@ -114,43 +101,34 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Barra de navegación inferior -->
     <LinearLayout
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="65dp"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:background="#FFFFFF"
         android:gravity="center">
 
-        <!-- Iconos de navegación inferior -->
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_home"
-            android:contentDescription="@string/home_icon"/>
+            android:background="#4E7266"
+            android:src="@drawable/analitics"/>
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_search"
-            android:contentDescription="@string/search_icon"/>
+            android:background="#4E7266"
+            android:src="@drawable/cookOllaa"/>
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_recipes"
-            android:contentDescription="@string/recipes_icon"/>
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/ic_profile"
-            android:contentDescription="@string/profile_icon"/>
+            android:background="#4E7266"
+            android:src="@drawable/user"/>
     </LinearLayout>
 </RelativeLayout>

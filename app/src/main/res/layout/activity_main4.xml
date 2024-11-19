@@ -1,11 +1,9 @@
-<!-- activity_ingredients.xml -->
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FAF3DD">
 
-    <!-- Contenedor ScrollView para desplazamiento vertical -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,7 +15,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Logo y Menú -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -46,7 +43,6 @@
                     android:contentDescription="@string/menu_icon"/>
             </LinearLayout>
 
-            <!-- Campo de búsqueda de ingredientes -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -70,7 +66,6 @@
                     android:background="@null"/>
             </LinearLayout>
 
-            <!-- Lista desplegable de ingredientes -->
             <ListView
                 android:id="@+id/ingredients_list"
                 android:layout_width="match_parent"
@@ -79,7 +74,6 @@
                 android:background="#FFFFFF"
                 android:elevation="4dp"/>
 
-            <!-- Visto recientemente -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -87,7 +81,6 @@
                 android:textColor="#4E7266"
                 android:layout_marginTop="16dp"/>
 
-            <!-- Scroll horizontal para Visto recientemente -->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -110,46 +103,40 @@
                         android:src="@drawable/img_dish2"
                         android:layout_marginEnd="8dp"/>
 
-                    <!-- Añade más imágenes según necesites -->
                 </LinearLayout>
             </HorizontalScrollView>
 
         </LinearLayout>
     </ScrollView>
 
-    <!-- Barra de navegación inferior -->
     <LinearLayout
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="65dp"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:background="#FFFFFF"
         android:gravity="center">
 
-        <!-- Iconos de navegación -->
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_home"/>
+            android:background="#4E7266"
+            android:src="@drawable/analitics"/>
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_search"/>
+            android:background="#4E7266"
+            android:src="@drawable/cookOllaa"/>
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_recipes"/>
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/ic_profile"/>
+            android:background="#4E7266"
+            android:src="@drawable/user"/>
     </LinearLayout>
 </RelativeLayout>

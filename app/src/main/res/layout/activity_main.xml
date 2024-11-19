@@ -1,6 +1,6 @@
-<!-- activity_main.xml -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -8,14 +8,11 @@
     android:background="#FAF3DD"
     android:padding="16dp">
 
-    <!-- Logo -->
-
-    <!-- Botón de Iniciar Sesión -->
     <ImageView
-        android:layout_width="308dp"
-        android:layout_height="308dp"
-        android:layout_marginBottom="24dp"
-        android:src="@drawable/CreativePantry" />
+        android:id="@+id/logoImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/CreativePantry"/>
 
     <Button
         android:layout_width="match_parent"
@@ -25,7 +22,6 @@
         android:textColor="#FFFFFF"
         android:layout_marginBottom="8dp"/>
 
-    <!-- Botón de Registrarse -->
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +30,6 @@
         android:textColor="#FFFFFF"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Texto para continuar como invitado -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,7 +37,6 @@
         android:textColor="#4E7266"
         android:layout_gravity="center"/>
 
-    <!-- Separador de texto -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,7 +45,6 @@
         android:layout_marginVertical="16dp"
         android:layout_gravity="center"/>
 
-    <!-- Botones de inicio de sesión social -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

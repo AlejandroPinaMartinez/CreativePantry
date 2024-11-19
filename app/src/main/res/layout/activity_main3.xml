@@ -1,4 +1,3 @@
-<!-- activity_register.xml -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -8,7 +7,6 @@
     android:background="#FAF3DD"
     android:padding="16dp">
 
-    <!-- Texto de bienvenida -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,46 +15,37 @@
         android:textColor="#4E7266"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Campo de nombre de usuario -->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nombre de usuario..."
-        android:drawableStart="@drawable/ic_user"
         android:backgroundTint="#4E7266"
         android:layout_marginBottom="8dp"/>
 
-    <!-- Campo de correo electrónico -->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Correo electrónico..."
-        android:drawableStart="@drawable/ic_email"
         android:inputType="textEmailAddress"
         android:backgroundTint="#4E7266"
         android:layout_marginBottom="8dp"/>
 
-    <!-- Campo de contraseña -->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Contraseña..."
-        android:drawableStart="@drawable/ic_password"
         android:inputType="textPassword"
         android:backgroundTint="#4E7266"
         android:layout_marginBottom="8dp"/>
 
-    <!-- Campo de repetir contraseña -->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Repite la contraseña..."
-        android:drawableStart="@drawable/ic_password"
         android:inputType="textPassword"
         android:backgroundTint="#4E7266"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Botón de Registro -->
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
