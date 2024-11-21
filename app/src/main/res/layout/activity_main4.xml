@@ -94,13 +94,25 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/img_dish1"
+                        android:src="@drawable/CreativePantry"
                         android:layout_marginEnd="8dp"/>
 
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/img_dish2"
+                        android:src="@drawable/CreativePantry"
+                        android:layout_marginEnd="8dp"/>
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/CreativePantry"
+                        android:layout_marginEnd="8dp"/>
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/CreativePantry"
                         android:layout_marginEnd="8dp"/>
 
                 </LinearLayout>
