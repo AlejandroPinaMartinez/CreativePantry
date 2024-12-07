@@ -12,7 +12,7 @@
         android:layout_height="70dp"
         android:layout_gravity="start"
         android:background="@drawable/CreativePantry"
-        android:scaleType="fitCenter"
+        android:scaleType="fitCenter"/>
 
     <Space
         android:layout_width="0dp"
