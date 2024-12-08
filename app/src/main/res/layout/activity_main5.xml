@@ -1,5 +1,4 @@
-<!-- activity_filtered_results.xml -->
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,8 +6,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottom_navigation">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -16,30 +14,27 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Logo y Filtro -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/CreativePantry"
-                    android:layout_marginEnd="8dp"/>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Resultado filtrado por Ingredientes"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:textColor="#4E7266"/>
 
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/user"/>
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/filtrar"/>
             </LinearLayout>
 
             <LinearLayout
@@ -52,14 +47,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:background="#4E7266"
+                    android:background="@drawable/edit_text_borde_redondo"
                     android:padding="8dp"
                     android:layout_marginBottom="8dp">
 
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/cookOllaa"
+                        android:src="@drawable/plato1"/>
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -81,22 +76,28 @@
                             android:text="3.3☆   20m"
                             android:textColor="#FFFFFF"
                             android:textSize="14sp"/>
+
                     </LinearLayout>
 
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/user"
-                        android:layout_gravity="center"/>
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="#4E7266"
+                        android:text=">"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp"
+                        android:gravity="center"
+                        android:layout_marginEnd="8dp" />
                 </LinearLayout>
 
                 <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/user"
-                    android:background="@null"
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="16dp"/>
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/edit_text_borde_redondo"
+                    android:src="@drawable/añadir" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -131,4 +132,4 @@
             android:background="#4E7266"
             android:src="@drawable/user"/>
     </LinearLayout>
-</RelativeLayout>
+</LinearLayout>

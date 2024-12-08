@@ -3,32 +3,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:background="#FAF3DD"
     android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/cocinero" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="¡Bienvenido a CreativePantry!"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textColor="#4E7266"
-        android:layout_marginBottom="16dp"/>
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:hint="Nombre de usuario..."
-        android:backgroundTint="#4E7266"
-        android:layout_marginBottom="8dp"/>
+        android:background="#4E7266"
+        android:textColorHint="#FFFFFF"
+        android:drawableStart="@drawable/user2"
+        android:drawablePadding="8dp"
+        android:layout_marginBottom="8dp" />
+
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:hint="Contraseña..."
         android:inputType="textPassword"
-        android:backgroundTint="#4E7266"
-        android:layout_marginBottom="8dp"/>
+        android:background="#4E7266"
+        android:textColorHint="#FFFFFF"
+        android:drawableStart="@drawable/candado2"
+        android:drawablePadding="8dp"
+        android:drawableEnd="@drawable/no_visible"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="8dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,13 +58,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Recuérdame"
+            android:textSize="15dp"
             android:textColor="#4E7266"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="69dp"
+            android:layout_marginLeft="15dp"
             android:text="¿Has olvidado la contraseña?"
+            android:textSize="15dp"
             android:textColor="#4E7266" />
     </LinearLayout>
 
@@ -56,6 +76,7 @@
         android:text="Inicia Sesión"
         android:backgroundTint="#4E7266"
         android:textColor="#FFFFFF"
+        android:textSize="20dp"
         android:layout_marginTop="16dp"/>
 
     <TextView
@@ -63,5 +84,7 @@
         android:layout_height="wrap_content"
         android:text="¿No tienes cuenta? Regístrate"
         android:textColor="#4E7266"
+        android:layout_gravity="center"
+        android:textSize="15dp"
         android:layout_marginTop="16dp"/>
 </LinearLayout>

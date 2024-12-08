@@ -6,80 +6,111 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottom_navigation">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="30dp"
             android:padding="16dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/logo_creative_pantry"
-                    android:contentDescription="@string/logo_description"
-                    android:layout_marginEnd="8dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Lista de ingredientes disponibles:"
-                    android:textSize="18sp"
-                    android:textColor="#4E7266"
-                    android:layout_marginEnd="auto"/>
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_menu"
-                    android:contentDescription="@string/menu_icon"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="16dp">
-
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:hint="Ingredientes..."
-                    android:backgroundTint="#4E7266"
-                    android:padding="8dp"/>
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_search"
-                    android:contentDescription="@string/search_icon"
-                    android:background="@null"/>
-            </LinearLayout>
-
-            <ListView
-                android:id="@+id/ingredients_list"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="#FFFFFF"
-                android:elevation="4dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Visto recientemente"
+                android:text="Lista de ingredientes disponibles:"
+                android:textSize="20sp"
+                android:textColor="#4E7266"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <EditText
+                android:layout_width="320dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_text_borde_verde"
+                android:drawableEnd="@drawable/cruz"
+                android:drawablePadding="8dp"
+                android:hint="Ingredientes..."
+                android:inputType="text"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColorHint="#4E7266" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_text_borde_redondo"
+                android:scaleType="centerInside"
+                android:src="@drawable/lupa"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/edit_text_borde_redondo2"
+                android:padding="8dp"
+                android:visibility="visible">
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="patates"
+                android:layout_margin="8dp"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="pomes"
+                android:layout_margin="8dp"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="carn"
+                android:layout_margin="8dp"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="peix"
+                android:layout_margin="8dp"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="oli"
+                android:layout_margin="8dp"
+                android:textColor="#FFFFFF" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sucre"
+                android:layout_margin="8dp"
+                android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visto recientemente >"
+                android:textSize="20dp"
                 android:textColor="#4E7266"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="16dp" />
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
@@ -94,32 +125,42 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/CreativePantry"
-                        android:layout_marginEnd="8dp"/>
+                        android:src="@drawable/plato1"
+                        android:layout_marginEnd="8dp"
+                        android:background="#4E7266"/>
 
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/CreativePantry"
-                        android:layout_marginEnd="8dp"/>
+                        android:src="@drawable/plato2"
+                        android:layout_marginEnd="8dp"
+                        android:background="#4E7266"/>
 
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/CreativePantry"
-                        android:layout_marginEnd="8dp"/>
+                        android:src="@drawable/plato3"
+                        android:layout_marginEnd="8dp"
+                        android:background="#4E7266"/>
 
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/CreativePantry"
-                        android:layout_marginEnd="8dp"/>
+                        android:src="@drawable/plato4"
+                        android:layout_marginEnd="8dp"
+                        android:background="#4E7266"/>
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/plato5"
+                        android:layout_marginEnd="8dp"
+                        android:background="#4E7266"/>
 
                 </LinearLayout>
             </HorizontalScrollView>
 
         </LinearLayout>
     </ScrollView>
-
 
 </RelativeLayout>

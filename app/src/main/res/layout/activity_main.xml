@@ -4,15 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:background="#FAF3DD"
-    android:padding="16dp">
+    android:padding="20dp">
 
     <ImageView
         android:id="@+id/logoImageView"
-        android:layout_width="200dp"
+        android:layout_width="400dp"
         android:layout_height="200dp"
-        android:src="@drawable/CreativePantry"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/logoCreativePantry" />
 
     <Button
         android:layout_width="match_parent"
