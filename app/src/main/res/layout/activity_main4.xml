@@ -65,41 +65,41 @@
             <TextView
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:text="patates"
+                android:text="Patatas"
                 android:layout_margin="8dp"
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="pomes"
+                android:text="Manzana"
                 android:layout_margin="8dp"
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="carn"
+                android:text="Ternera"
                 android:layout_margin="8dp"
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="peix"
+                android:text="Bacalao"
                 android:layout_margin="8dp"
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="oli"
+                android:text="Aceite"
                 android:layout_margin="8dp"
                 android:textColor="#FFFFFF" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="sucre"
+                android:text="Azucar"
                 android:layout_margin="8dp"
                 android:textColor="#FFFFFF" />
 
