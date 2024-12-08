@@ -5,6 +5,11 @@
     android:background="#FAF3DD"
     android:orientation="vertical">
 
+    <FrameLayout
+        android:id="@+id/top_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -57,6 +62,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/plato1"/>
 
                     <LinearLayout
@@ -105,6 +111,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/plato2"/>
 
                     <LinearLayout
@@ -141,104 +148,6 @@
                         android:textColorLink="#F2E5E5" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:background="@drawable/edit_text_borde_redondo"
-                    android:padding="8dp"
-                    android:layout_marginBottom="8dp">
-
-                    <ImageView
-                        android:layout_marginLeft="10dp"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/plato3"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="1"
-                        android:paddingStart="8dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Pinchos de carne"
-                            android:textColor="#FFFFFF"
-                            android:textSize="16sp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="4.6☆   10m"
-                            android:textColor="#FFFFFF"
-                            android:textSize="14sp"/>
-
-                    </LinearLayout>
-
-                    <Button
-                        android:id="@+id/btnPinchos"
-                        android:layout_width="60dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:backgroundTint="#4E7266"
-                        android:textSize="25dp"
-                        android:text=">"
-                        android:textColorLink="#F2E5E5" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:background="@drawable/edit_text_borde_redondo"
-                    android:padding="8dp"
-                    android:layout_marginBottom="8dp">
-
-                    <ImageView
-                        android:layout_marginLeft="10dp"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/plato4"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="1"
-                        android:paddingStart="8dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Pollo a la plancha"
-                            android:textColor="#FFFFFF"
-                            android:textSize="16sp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="4.2☆   15m"
-                            android:textColor="#FFFFFF"
-                            android:textSize="14sp"/>
-
-                    </LinearLayout>
-
-                    <Button
-                        android:id="@+id/btPollo"
-                        android:layout_width="60dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:backgroundTint="#4E7266"
-                        android:textSize="25dp"
-                        android:text=">"
-                        android:textColorLink="#F2E5E5" />
-                </LinearLayout>
-
-
-
                 <ImageButton
                     android:layout_width="55dp"
                     android:layout_height="50dp"
@@ -249,5 +158,8 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
+    <FrameLayout
+        android:id="@+id/bottom_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

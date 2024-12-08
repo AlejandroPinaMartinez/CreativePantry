@@ -11,5 +11,11 @@ class MainActivity5 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main5)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.bottom_bar_container, BarraInferiorOpcions())
+            .commit()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.top_bar_container, FragmentBarraSuperiorOpciones())
+            .commit()
     }
 }

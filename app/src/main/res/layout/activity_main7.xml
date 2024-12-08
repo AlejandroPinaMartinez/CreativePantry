@@ -5,6 +5,10 @@
     android:padding="16dp"
     android:background="#FAF3DD">
 
+    <FrameLayout
+        android:id="@+id/top_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
     <ImageView
         android:layout_marginTop="30dp"
         android:id="@+id/plate_image"
@@ -135,5 +139,8 @@
                 android:src="@drawable/guardar" />
         </LinearLayout>
     </LinearLayout>
-
+    <FrameLayout
+        android:id="@+id/bottom_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

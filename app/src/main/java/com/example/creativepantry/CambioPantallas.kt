@@ -2,7 +2,6 @@ package com.example.creativepantry
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.EdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.creativepantry.R
 import android.widget.Button
@@ -17,6 +16,33 @@ class CambioPantallas : AppCompatActivity() {
 
         findViewById<Button>(R.id.button).setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.button2).setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.button3).setOnClickListener {
+            val intent = Intent(this, MainActivity3::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.button4).setOnClickListener {
+            val intent = Intent(this, MainActivity4::class.java)
+            startActivity(intent)
+        }
+        findViewById<Button>(R.id.button5).setOnClickListener {
+            val intent = Intent(this, MainActivity5::class.java)
+            startActivity(intent)
+        }
+        findViewById<Button>(R.id.button6).setOnClickListener {
+            val intent = Intent(this, MainActivity6::class.java)
+            startActivity(intent)
+        }
+        findViewById<Button>(R.id.button7).setOnClickListener {
+            val intent = Intent(this, MainActivity7::class.java)
             startActivity(intent)
         }
     }

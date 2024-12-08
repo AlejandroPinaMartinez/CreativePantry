@@ -1,8 +1,13 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAF3DD">
+    android:background="#FAF3DD"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/top_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -136,31 +141,13 @@
                         android:layout_marginEnd="8dp"
                         android:background="#4E7266"/>
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/plato3"
-                        android:layout_marginEnd="8dp"
-                        android:background="#4E7266"/>
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/plato4"
-                        android:layout_marginEnd="8dp"
-                        android:background="#4E7266"/>
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/plato5"
-                        android:layout_marginEnd="8dp"
-                        android:background="#4E7266"/>
-
                 </LinearLayout>
             </HorizontalScrollView>
 
         </LinearLayout>
     </ScrollView>
-
-</RelativeLayout>
+    <FrameLayout
+        android:id="@+id/bottom_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
