@@ -5,7 +5,8 @@
     android:background="#FAF3DD"
     android:orientation="horizontal"
     android:padding="10dp"
-    android:gravity="center_vertical">
+    android:gravity="center_vertical"
+    android:layout_marginTop="30dp">
 
 
     <ImageButton
