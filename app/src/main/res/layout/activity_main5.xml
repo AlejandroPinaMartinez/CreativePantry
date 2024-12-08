@@ -244,7 +244,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
                     android:background="@drawable/edit_text_borde_redondo"
-                    android:src="@drawable/añadir" />
+                    android:src="@drawable/anadir" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -270,7 +270,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#4E7266"
-            android:src="@drawable/cookOllaa"/>
+            android:src="@drawable/olla"/>
 
         <ImageView
             android:layout_width="0dp"
