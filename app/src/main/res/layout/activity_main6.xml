@@ -2,10 +2,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background">
+    android:background="#FAF3DD">
 
-    <!-- Header -->
     <LinearLayout
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -15,25 +15,23 @@
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:src="@drawable/ic_settings_icon" />
+            android:src="@drawable/settings" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Ajustes y Preferencias"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/textPrimary" />
+            android:textColor="#4E7266"
+            android:textSize="20dp"/>
     </LinearLayout>
 
-    <!-- Lista de ajustes -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Idioma -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,24 +42,22 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_language" />
+                android:src="@drawable/tierra" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_weight="1"
                 android:text="Idioma"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/textPrimary" />
+                android:textColor="#4E7266"/>
 
             <Spinner
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:entries="@array/language_options" />
+                android:background="#FFFFFF" />
         </LinearLayout>
 
-        <!-- Tema -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,7 +68,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_theme" />
+                android:src="@drawable/paleta" />
 
             <TextView
                 android:layout_width="0dp"
@@ -81,14 +77,15 @@
                 android:layout_weight="1"
                 android:text="Tema"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/textPrimary" />
+                android:textColor="#4E7266" />
 
             <Switch
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:thumbTint="#CEBB6A"
+                android:trackTint="#4E7266"/>
         </LinearLayout>
 
-        <!-- Notificaciones -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -99,7 +96,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_notifications" />
+                android:src="@drawable/notificaciones" />
 
             <TextView
                 android:layout_width="0dp"
@@ -108,14 +105,14 @@
                 android:layout_weight="1"
                 android:text="Notificaciones"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/textPrimary" />
+                android:textColor="#4E7266" />
 
             <Switch
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:thumbTint="#CEBB6A"
+                android:trackTint="#4E7266"/>
         </LinearLayout>
-
-        <!-- Compartir ubicación -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -126,7 +123,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_location" />
+                android:src="@drawable/buscar" />
 
             <TextView
                 android:layout_width="0dp"
@@ -135,11 +132,13 @@
                 android:layout_weight="1"
                 android:text="Compartir ubicación"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/textPrimary" />
+                android:textColor="#4E7266" />
 
             <Switch
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:thumbTint="#CEBB6A"
+                android:trackTint="#4E7266"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FAF3DD">
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:id="@+id/plate_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/plato1"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/plate_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arroz a la cubana"
+        android:textColor="#4E7266"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/cooking_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiempo: 30 minutos"
+        android:textColor="#4E7266"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/ingredients_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingredientes:"
+        android:textColor="#4E7266"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/ingredients_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="• Arroz 1 taza\n• Huevo 1\n• Tomate 2\n• Aceite 2 cucharadas"
+        android:textColor="#4E7266"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/preparation_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pasos para la preparación:"
+        android:textColor="#4E7266"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/preparation_steps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. Cocinar el arroz en agua con sal por 20 minutos.\n2. Freír el huevo en aceite.\n3. Preparar la salsa de tomate.\n4. Servir todo junto y disfrutar."
+        android:textColor="#4E7266"
+        android:textSize="16sp"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/star1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/estrellaeLlena"
+                android:layout_marginEnd="8dp" />
+
+            <ImageView
+                android:id="@+id/star2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/estrellaeLlena"
+                android:layout_marginEnd="8dp" />
+
+            <ImageView
+                android:id="@+id/star3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/estrellaeLlena"
+                android:layout_marginEnd="8dp" />
+
+            <ImageView
+                android:id="@+id/star4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/estrellaVacia"
+                android:layout_marginEnd="8dp" />
+
+            <ImageView
+                android:id="@+id/star5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/estrellaVacia"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginStart="150dp">
+
+            <ImageButton
+                android:id="@+id/btnGuardar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#FAF3DD"
+                android:src="@drawable/guardar" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
