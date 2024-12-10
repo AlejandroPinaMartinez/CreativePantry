@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FAF3DD"
+    android:background="@color/marron_claro"
     android:padding="16dp">
 
     <ImageView
@@ -21,7 +21,7 @@
         android:text="¡Bienvenido a CreativePantry!"
         android:textSize="20sp"
         android:fontFamily="@font/asar"
-        android:textColor="#4E7266"
+        android:textColor="@color/verde"
         android:layout_gravity="center"
         android:layout_marginBottom="50dp"/>
 
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:hint="Nombre de usuario..."
-        android:background="#4E7266"
+        android:background="@color/verde"
         android:fontFamily="@font/asar"
         android:textColorHint="#FFFFFF"
         android:drawableStart="@drawable/user2"
@@ -42,7 +42,7 @@
         android:layout_height="35dp"
         android:hint="Contraseña..."
         android:inputType="textPassword"
-        android:background="#4E7266"
+        android:background="@color/verde"
         android:fontFamily="@font/asar"
         android:textColorHint="#FFFFFF"
         android:drawableStart="@drawable/candado2"
@@ -63,7 +63,7 @@
             android:text="Recuérdame"
             android:textSize="15dp"
             android:fontFamily="@font/asar"
-            android:textColor="#4E7266"/>
+            android:textColor="@color/verde"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -72,14 +72,14 @@
             android:text="¿Has olvidado la contraseña?"
             android:textSize="15dp"
             android:fontFamily="@font/asar"
-            android:textColor="#4E7266" />
+            android:textColor="@color/verde" />
     </LinearLayout>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Inicia Sesión"
-        android:backgroundTint="#4E7266"
+        android:backgroundTint="@color/verde"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
         android:fontFamily="@font/asar"
@@ -89,7 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="¿No tienes cuenta? Regístrate"
-        android:textColor="#4E7266"
+        android:textColor="@color/verde"
         android:layout_gravity="center"
         android:textSize="15dp"
         android:fontFamily="@font/asar"

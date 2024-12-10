@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:orientation="horizontal"
-        android:background="#FAF3DD"
+        android:background="@color/marron_claro"
         android:gravity="center_vertical"
         android:padding="8dp">
 
@@ -21,10 +21,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="  ___________________________________________________"
-            android:background="#FAF3DD"
+            android:background="@color/marron_claro"
             android:textSize="16sp"
             android:paddingEnd="16dp"
-            android:textColor="#4E7266"/>
+            android:textColor="@color/verde"/>
     </LinearLayout>
 
     <LinearLayout
@@ -36,7 +36,7 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:background="#FAF3DD"
+            android:background="@color/marron_claro"
             android:scaleType="centerInside"
             android:src="@drawable/analitics" />
 
@@ -44,7 +44,7 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:background="#FAF3DD"
+            android:background="@color/marron_claro"
             android:scaleType="centerInside"
             android:src="@drawable/olla" />
 
@@ -52,7 +52,7 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:background="#FAF3DD"
+            android:background="@color/marron_claro"
             android:scaleType="centerInside"
             android:src="@drawable/user" />
     </LinearLayout>

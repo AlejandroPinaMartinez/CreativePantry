@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAF3DD"
+    android:background="@color/marron_claro"
     android:orientation="vertical">
 
     <FrameLayout
@@ -22,7 +22,7 @@
                 android:text="Lista de ingredientes disponibles:"
                 android:textSize="20sp"
                 android:fontFamily="@font/asar"
-                android:textColor="#4E7266"/>
+                android:textColor="@color/verde"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                 android:inputType="text"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:textColorHint="#4E7266" />
+                android:textColorHint="@color/verde" />
 
                 <Space
                     android:layout_width="10dp"
@@ -118,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:text="Visto recientemente >"
                 android:textSize="20dp"
-                android:textColor="#4E7266"
+                android:textColor="@color/verde"
                 android:fontFamily="@font/asar"
                 android:layout_marginTop="16dp" />
 
@@ -137,14 +137,14 @@
                         android:layout_height="80dp"
                         android:src="@drawable/plato1"
                         android:layout_marginEnd="8dp"
-                        android:background="#4E7266"/>
+                        android:background="@color/verde"/>
 
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/plato2"
                         android:layout_marginEnd="8dp"
-                        android:background="#4E7266"/>
+                        android:background="@color/verde"/>
 
                 </LinearLayout>
             </HorizontalScrollView>

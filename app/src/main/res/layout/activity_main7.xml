@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FAF3DD">
+    android:background="@color/marron_claro">
     <FrameLayout
         android:id="@+id/top_bar_container"
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/asar"
             android:text="Arroz a la cubana"
-            android:textColor="#4E7266"
+            android:textColor="@color/verde"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -41,7 +41,7 @@
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/asar"
             android:text="Tiempo: 30 minutos"
-            android:textColor="#4E7266"
+            android:textColor="@color/verde"
             android:textSize="16sp" />
 
         <TextView
@@ -51,7 +51,7 @@
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/asar"
             android:text="Ingredientes:"
-            android:textColor="#4E7266"
+            android:textColor="@color/verde"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -62,7 +62,7 @@
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/asar"
             android:text="• Arroz 1 taza\n• Huevo 1\n• Tomate 2\n• Aceite 2 cucharadas"
-            android:textColor="#4E7266"
+            android:textColor="@color/verde"
             android:textSize="16sp" />
 
         <TextView
@@ -72,7 +72,7 @@
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/asar"
             android:text="Pasos para la preparación:"
-            android:textColor="#4E7266"
+            android:textColor="@color/verde"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -83,7 +83,7 @@
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/asar"
             android:text="1. Cocinar el arroz en agua con sal por 20 minutos.\n2. Freír el huevo en aceite.\n3. Preparar la salsa de tomate.\n4. Servir todo junto y disfrutar."
-            android:textColor="#4E7266"
+            android:textColor="@color/verde"
             android:textSize="16sp" />
 
         <LinearLayout
@@ -146,7 +146,7 @@
                     android:id="@+id/btnGuardar"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:backgroundTint="#FAF3DD"
+                    android:backgroundTint="@color/verde"
                     android:src="@drawable/guardar" />
             </LinearLayout>
         </LinearLayout>
