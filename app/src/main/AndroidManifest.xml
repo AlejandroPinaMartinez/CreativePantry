@@ -13,10 +13,10 @@
         android:theme="@style/Theme.CreativePantry"
         tools:targetApi="31">
         <activity
-            android:name=".CambioPantallas"
+            android:name=".MainActivity7"
             android:exported="false" />
         <activity
-            android:name=".MainActivity7"
+            android:name=".CambioPantallas"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
