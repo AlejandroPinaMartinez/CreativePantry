@@ -19,6 +19,7 @@
         android:layout_marginBottom="16dp"/>
 
     <TextView
+        android:fontFamily="@font/asar"
         android:id="@+id/plate_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,6 +30,7 @@
         android:layout_marginBottom="8dp"/>
 
     <TextView
+        android:fontFamily="@font/asar"
         android:id="@+id/cooking_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,6 +40,7 @@
         android:layout_marginBottom="16dp"/>
 
     <TextView
+        android:fontFamily="@font/asar"
         android:id="@+id/ingredients_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,6 +51,7 @@
         android:layout_marginBottom="8dp"/>
 
     <TextView
+        android:fontFamily="@font/asar"
         android:id="@+id/ingredients_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,6 +61,7 @@
         android:layout_marginBottom="16dp"/>
 
     <TextView
+        android:fontFamily="@font/asar"
         android:id="@+id/preparation_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,6 +72,7 @@
         android:layout_marginBottom="8dp"/>
 
     <TextView
+        android:fontFamily="@font/asar"
         android:id="@+id/preparation_steps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

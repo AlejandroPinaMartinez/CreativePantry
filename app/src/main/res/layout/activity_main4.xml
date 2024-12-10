@@ -21,6 +21,7 @@
                 android:layout_height="wrap_content"
                 android:text="Lista de ingredientes disponibles:"
                 android:textSize="20sp"
+                android:fontFamily="@font/asar"
                 android:textColor="#4E7266"/>
 
             <LinearLayout
@@ -36,6 +37,7 @@
                 android:drawableEnd="@drawable/cruz"
                 android:drawablePadding="8dp"
                 android:hint="Ingredientes..."
+                    android:fontFamily="@font/asar"
                 android:inputType="text"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
@@ -67,6 +69,7 @@
                 android:layout_height="wrap_content"
                 android:text="Patatas"
                 android:layout_margin="8dp"
+                android:fontFamily="@font/asar"
                 android:textColor="#FFFFFF" />
 
             <TextView
@@ -74,6 +77,7 @@
                 android:layout_height="wrap_content"
                 android:text="Manzana"
                 android:layout_margin="8dp"
+                android:fontFamily="@font/asar"
                 android:textColor="#FFFFFF" />
 
             <TextView
@@ -81,6 +85,7 @@
                 android:layout_height="wrap_content"
                 android:text="Ternera"
                 android:layout_margin="8dp"
+                android:fontFamily="@font/asar"
                 android:textColor="#FFFFFF" />
 
             <TextView
@@ -88,6 +93,7 @@
                 android:layout_height="wrap_content"
                 android:text="Bacalao"
                 android:layout_margin="8dp"
+                android:fontFamily="@font/asar"
                 android:textColor="#FFFFFF" />
 
             <TextView
@@ -95,12 +101,14 @@
                 android:layout_height="wrap_content"
                 android:text="Aceite"
                 android:layout_margin="8dp"
+                android:fontFamily="@font/asar"
                 android:textColor="#FFFFFF" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Azucar"
                 android:layout_margin="8dp"
+                android:fontFamily="@font/asar"
                 android:textColor="#FFFFFF" />
 
             </LinearLayout>
@@ -111,6 +119,7 @@
                 android:text="Visto recientemente >"
                 android:textSize="20dp"
                 android:textColor="#4E7266"
+                android:fontFamily="@font/asar"
                 android:layout_marginTop="16dp" />
 
             <HorizontalScrollView

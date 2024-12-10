@@ -20,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Inicia Sesión"
+        android:fontFamily="@font/asar"
         android:backgroundTint="@color/verde"
         android:textColor="#FFFFFF"
         android:layout_marginBottom="8dp"/>
@@ -28,6 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Registrarse"
+        android:fontFamily="@font/asar"
         android:backgroundTint="@color/verde"
         android:textColor="#FFFFFF"
         android:layout_marginBottom="16dp"/>
@@ -37,6 +39,7 @@
         android:layout_height="wrap_content"
         android:text="Continua como invitado..."
         android:textColor="@color/verde"
+        android:fontFamily="@font/asar"
         android:layout_gravity="center"/>
 
     <TextView
@@ -45,6 +48,7 @@
         android:layout_gravity="center"
         android:layout_marginVertical="16dp"
         android:text="O"
+        android:fontFamily="@font/asar"
         android:textColor="@color/verde" />
 
     <LinearLayout
@@ -56,6 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Continuar con Google"
+            android:fontFamily="@font/asar"
             android:backgroundTint="#4285F4"
             android:textColor="#FFFFFF"
             android:layout_marginBottom="8dp"/>
@@ -66,6 +71,7 @@
             android:text="Continuar con Facebook"
             android:backgroundTint="#3B5998"
             android:textColor="#FFFFFF"
+            android:fontFamily="@font/asar"
             android:layout_marginBottom="8dp"/>
 
         <Button
@@ -73,6 +79,7 @@
             android:layout_height="wrap_content"
             android:text="Continuar con Apple"
             android:backgroundTint="#000000"
+            android:fontFamily="@font/asar"
             android:textColor="#FFFFFF"/>
     </LinearLayout>
 </LinearLayout>
