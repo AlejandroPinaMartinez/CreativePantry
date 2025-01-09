@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FAF3DD"
+    android:background="@color/marron_claro"
     android:padding="16dp">
 
     <ImageView
@@ -21,7 +21,7 @@
         android:text="¡Bienvenido a CreativePantry!"
         android:textSize="20sp"
         android:fontFamily="@font/asar"
-        android:textColor="#4E7266"
+        android:textColor="@color/verde"
         android:layout_gravity="center"
         android:layout_marginBottom="50dp"/>
 
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:hint="Nombre de usuario..."
-        android:background="#4E7266"
+        android:background="@color/verde"
         android:fontFamily="@font/asar"
         android:textColorHint="#FFFFFF"
         android:drawableStart="@drawable/user2"
@@ -41,7 +41,7 @@
         android:layout_height="35dp"
         android:hint="Correo electrónico..."
         android:inputType="textEmailAddress"
-        android:background="#4E7266"
+        android:background="@color/verde"
         android:textColorHint="#FFFFFF"
         android:fontFamily="@font/asar"
         android:drawableStart="@drawable/user2"
@@ -53,7 +53,7 @@
         android:layout_height="35dp"
         android:hint="Contraseña..."
         android:inputType="textPassword"
-        android:background="#4E7266"
+        android:background="@color/verde"
         android:textColorHint="#FFFFFF"
         android:drawableStart="@drawable/candado2"
         android:drawablePadding="8dp"
@@ -67,7 +67,7 @@
         android:layout_height="35dp"
         android:hint="Repite la contraseña..."
         android:inputType="textPassword"
-        android:background="#4E7266"
+        android:background="@color/verde"
         android:textColorHint="#FFFFFF"
         android:fontFamily="@font/asar"
         android:drawableStart="@drawable/candado2"
@@ -81,7 +81,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Regístrate"
-        android:backgroundTint="#4E7266"
+        android:backgroundTint="@color/verde"
         android:textSize="20dp"
         android:fontFamily="@font/asar"
         android:textColor="#FFFFFF"

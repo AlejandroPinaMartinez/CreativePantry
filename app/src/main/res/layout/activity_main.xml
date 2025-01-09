@@ -4,9 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+<<<<<<< HEAD
     android:background="#FAF3DD"
     android:icon="@mipmap/ic_launcher"
     android:label="@string/app_name"
+=======
+    android:background="@color/marron_claro"
+>>>>>>> 2c57c39a578b046b2459c51d5837f6e828ff684f
     android:padding="20dp">
 
     <ImageView
