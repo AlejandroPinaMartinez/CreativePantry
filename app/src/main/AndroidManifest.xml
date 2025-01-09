@@ -16,7 +16,7 @@
             android:name=".CambioPantallas"
             android:exported="false" />
         <activity
-            android:name=".MainActivity7"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +28,7 @@
             android:name=".MainActivity6"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".MainActivity7"
             android:exported="false" />
         <activity
             android:name=".MainActivity5"

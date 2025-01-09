@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#FAF3DD"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
     android:padding="20dp">
 
     <ImageView
