@@ -9,14 +9,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 import com.google.android.material.navigation.NavigationView
 
-class MenuDrawerActivity : AppCompatActivity() {
+class AjustesPreferencias : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
     private lateinit var  toolbar :Toolbar
@@ -24,22 +23,26 @@ class MenuDrawerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_menu_drawer)
+        setContentView(R.layout.activity_ajustes_preferencias)
 
-//        val menu=findViewById<BottomNavigationView>(R.id.menubottom)
-//        menu.setOnItemSelectedListener {
-//            when (it.itemId){
-//                R.id.bottom_perfil -> {
-//                    val intent = Intent(this, PerfilActivity::class.java)
-//                    startActivity(intent)
-//                }
-//                R.id.bottom_pref -> {
-//                    val intent = Intent(this, PreferencesActivity::class.java)
-//                    startActivity(intent)
-//                }
-//            }
-//            true
-//        }
+        val menu=findViewById<BottomNavigationView>(R.id.menu_down)
+        menu.setOnItemSelectedListener {
+            when (it.itemId){
+                R.id.menu_stats -> {
+                    val intent = Intent(this, PantallaInicio::class.java)
+                    startActivity(intent)
+                }
+                R.id.menu_inici -> {
+                    val intent = Intent(this, PantallaInicio::class.java)
+                    startActivity(intent)
+                }
+                R.id.menu_perfil -> {
+                    val intent = Intent(this, PantallaInicio::class.java)
+                    startActivity(intent)
+                }
+            }
+            true
+        }
 
         toolbar=findViewById(R.id.main_toolbar)
         setSupportActionBar(toolbar)
@@ -61,17 +64,17 @@ class MenuDrawerActivity : AppCompatActivity() {
             }
             R.id.menu_guardados -> {
                 Toast.makeText(this, "Guardados", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, MainActivity5::class.java)
+                val intent = Intent(this, Filtrado::class.java)
                 startActivity(intent)
             }
             R.id.menu_premium-> {
                 Toast.makeText(this, "Resumen", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, MainActivity5::class.java)
+                val intent = Intent(this, Filtrado::class.java)
                 startActivity(intent)
             }
             R.id.menu_ajustes -> {
                 Toast.makeText(this, "Mis Clases", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, MainActivity5::class.java)
+                val intent = Intent(this, Filtrado::class.java)
                 startActivity(intent)
             }
         }

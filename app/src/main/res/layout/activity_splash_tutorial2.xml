@@ -4,11 +4,13 @@
     android:background="@color/marron_claro"
     android:orientation="vertical">
 
+    <!-- Contenedor de barra superior -->
     <FrameLayout
         android:id="@+id/top_bar_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <!-- Contenido principal -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,24 +18,27 @@
         android:layout_marginTop="30dp"
         android:padding="16dp">
 
+        <!-- Título -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Lista de ingredientes disponibles:"
             android:textSize="20sp"
             android:fontFamily="@font/asar"
-            android:textColor="@color/verde"/>
+            android:textColor="@color/verde" />
 
+        <!-- Barra de búsqueda -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="200px">
+            android:layout_marginBottom="16dp">
 
             <EditText
-                android:layout_width="320dp"
+                android:layout_width="0dp"
                 android:layout_height="35dp"
+                android:layout_weight="1"
                 android:background="@drawable/edit_text_borde_verde"
                 android:drawableEnd="@drawable/cruz"
                 android:drawablePadding="8dp"
@@ -53,11 +58,10 @@
                 android:layout_height="35dp"
                 android:background="@drawable/edit_text_borde_redondo"
                 android:scaleType="centerInside"
-                android:src="@drawable/lupa"/>
-
+                android:src="@drawable/lupa" />
         </LinearLayout>
 
-        <!-- Cuadro central añadido -->
+        <!-- Mensaje informativo -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,7 +74,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/exclamacion"
-                android:layout_marginEnd="8dp"/>
+                android:layout_marginEnd="8dp" />
 
             <TextView
                 android:layout_width="0dp"
@@ -82,15 +86,17 @@
                 android:textSize="20sp" />
         </LinearLayout>
 
+        <!-- Texto de "Visto recientemente" -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Visto recientemente >"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="@color/verde"
             android:fontFamily="@font/asar"
             android:layout_marginTop="16dp" />
 
+        <!-- Scroll horizontal -->
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -104,25 +110,23 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src=""
                     android:layout_marginEnd="8dp"
-                    android:background="@color/verde"/>
+                    android:background="@color/verde" />
 
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src=""
                     android:layout_marginEnd="8dp"
-                    android:background="@color/verde"/>
-
+                    android:background="@color/verde" />
             </LinearLayout>
         </HorizontalScrollView>
     </LinearLayout>
 
+    <!-- Contenedor de barra inferior -->
     <FrameLayout
         android:id="@+id/bottom_bar_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginTop="230dp"/>
+        android:layout_marginTop="16dp" />
 </LinearLayout>

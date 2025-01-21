@@ -22,14 +22,14 @@
             android:text="Lista de ingredientes disponibles:"
             android:textSize="20sp"
             android:fontFamily="@font/asar"
-            android:textColor="@color/verde"/>
+            android:textColor="@color/verde" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="200px">
+            android:layout_marginBottom="200dp">
 
             <EditText
                 android:layout_width="320dp"
@@ -53,11 +53,9 @@
                 android:layout_height="35dp"
                 android:background="@drawable/edit_text_borde_redondo"
                 android:scaleType="centerInside"
-                android:src="@drawable/lupa"/>
-
+                android:src="@drawable/lupa" />
         </LinearLayout>
 
-        <!-- Cuadro central añadido -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,7 +68,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/exclamacion"
-                android:layout_marginEnd="8dp"/>
+                android:layout_marginEnd="8dp" />
 
             <TextView
                 android:layout_width="0dp"
@@ -86,7 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Visto recientemente >"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="@color/verde"
             android:fontFamily="@font/asar"
             android:layout_marginTop="16dp" />
@@ -104,17 +102,12 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src=""
-                    android:layout_marginEnd="8dp"
-                    android:background="@color/verde"/>
+                    android:background="@color/verde" />
 
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src=""
-                    android:layout_marginEnd="8dp"
-                    android:background="@color/verde"/>
-
+                    android:background="@color/verde" />
             </LinearLayout>
         </HorizontalScrollView>
     </LinearLayout>
@@ -124,5 +117,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginTop="230dp"/>
+        android:layout_marginTop="230dp" />
 </LinearLayout>

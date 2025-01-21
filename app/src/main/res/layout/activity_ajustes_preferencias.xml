@@ -176,13 +176,13 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Menú inferior
+        <!-- Menú inferior -->
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/menubottom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:menu="@menu/menu_bottom" /> -->
+            app:menu="@menu/menu_down" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Menú lateral de navegación -->
