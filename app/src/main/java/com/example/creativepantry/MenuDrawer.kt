@@ -26,27 +26,27 @@ class MenuDrawerActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_menu_drawer)
 
-        val menu=findViewById<BottomNavigationView>(R.id.menubottom)
-        menu.setOnItemSelectedListener {
-            when (it.itemId){
-                R.id.bottom_perfil -> {
-                    val intent = Intent(this, PerfilActivity::class.java)
-                    startActivity(intent)
-                }
-                R.id.bottom_pref -> {
-                    val intent = Intent(this, PreferencesActivity::class.java)
-                    startActivity(intent)
-                }
-            }
-            true
-        }
+//        val menu=findViewById<BottomNavigationView>(R.id.menubottom)
+//        menu.setOnItemSelectedListener {
+//            when (it.itemId){
+//                R.id.bottom_perfil -> {
+//                    val intent = Intent(this, PerfilActivity::class.java)
+//                    startActivity(intent)
+//                }
+//                R.id.bottom_pref -> {
+//                    val intent = Intent(this, PreferencesActivity::class.java)
+//                    startActivity(intent)
+//                }
+//            }
+//            true
+//        }
 
         toolbar=findViewById(R.id.main_toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         drawerLayout = findViewById(R.id.main_drawerlayout)
-        toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+        toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
@@ -61,17 +61,17 @@ class MenuDrawerActivity : AppCompatActivity() {
             }
             R.id.menu_guardados -> {
                 Toast.makeText(this, "Guardados", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, GuardadosActivity::class.java)
+                val intent = Intent(this, MainActivity5::class.java)
                 startActivity(intent)
             }
             R.id.menu_premium-> {
                 Toast.makeText(this, "Resumen", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, PremiumActivity::class.java)
+                val intent = Intent(this, MainActivity5::class.java)
                 startActivity(intent)
             }
             R.id.menu_ajustes -> {
                 Toast.makeText(this, "Mis Clases", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, AjustesActivity::class.java)
+                val intent = Intent(this, MainActivity5::class.java)
                 startActivity(intent)
             }
         }

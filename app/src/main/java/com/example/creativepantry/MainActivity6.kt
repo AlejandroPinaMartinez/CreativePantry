@@ -15,9 +15,5 @@ class MainActivity6 : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.bottom_bar_container, BarraInferiorOpcions())
             .commit()
-
-        // Configurar la barra de herramientas
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
     }
 }

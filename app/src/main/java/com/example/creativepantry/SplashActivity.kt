@@ -22,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
         slogan.startAnimation(fadeInAnimation)
 
         Handler(Looper.getMainLooper()).postDelayed({
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, PantallaInicio::class.java)
         startActivity(intent)
         finish()
     }, 5000)

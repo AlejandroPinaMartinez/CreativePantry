@@ -4,5 +4,7 @@
     <string name="guardados">guardadas</string>
     <string name="premium">menu_premium</string>
     <string name="ajustes">menu_ajustes</string>
+    <string name="close">Cerrar Menu</string>
+    <string name="open">Abrir Menu</string>">
 
 </resources>
