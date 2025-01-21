@@ -25,7 +25,7 @@ class AjustesPreferencias : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_ajustes_preferencias)
 
-        val menu=findViewById<BottomNavigationView>(R.id.menu_down)
+        val menu=findViewById<BottomNavigationView>(R.id.menubottom)
         menu.setOnItemSelectedListener {
             when (it.itemId){
                 R.id.menu_stats -> {
