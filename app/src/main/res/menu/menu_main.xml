@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_perfil"
+        android:title="@string/perfil"
+        android:icon="@drawable/cocinero"/>
+    <item
+        android:id="@+id/menu_guardados"
+        android:title="@string/guardados"/>
+    <item
+        android:id="@+id/menu_premium"
+        android:title="@string/premium"/>
+    <item
+        android:id="@+id/menu_ajustes"
+        android:title="@string/ajustes"/>
+</menu>
