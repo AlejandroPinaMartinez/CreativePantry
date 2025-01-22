@@ -148,6 +148,14 @@
 
                 </LinearLayout>
             </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/buttonTutorial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="280dp"
+                android:text="Tutorial"
+                android:textColorLink="@color/verde" />
         </LinearLayout>
     <FrameLayout
         android:id="@+id/bottom_bar_container"

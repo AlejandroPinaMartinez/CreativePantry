@@ -13,7 +13,7 @@
         android:theme="@style/Theme.CreativePantry"
         tools:targetApi="31" >
         <activity
-            android:name=".AjustesPreferencias"
+            android:name=".BuscarIngredientes"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +31,7 @@
             android:name=".Filtrado"
             android:exported="false" />
         <activity
-            android:name=".BuscarIngredientes"
+            android:name=".AjustesPreferencias"
             android:exported="false" />
         <activity
             android:name=".PantallaRegistro"
