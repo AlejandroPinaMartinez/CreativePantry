@@ -159,6 +159,11 @@
                     android:background="@drawable/edit_text_borde_redondo"
                     android:src="@drawable/anadir" />
             </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"/>
         </LinearLayout>
     <FrameLayout
         android:id="@+id/bottom_bar_container"
