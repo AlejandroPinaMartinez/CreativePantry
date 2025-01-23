@@ -19,9 +19,9 @@ class Splash_Tutorial_2 : AppCompatActivity() {
             .replace(R.id.top_bar_container, FragmentBarraSuperiorOpciones())
             .commit()
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, Splash_Tutorial_2::class.java)
+            val intent = Intent(this, Splash_Tutorial_3::class.java)
             startActivity(intent)
             finish()
-        }, 5000)
+        }, 3000)
     }
 }

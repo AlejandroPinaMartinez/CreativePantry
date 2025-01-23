@@ -25,6 +25,6 @@ class Splash_Tutorial_3 : AppCompatActivity() {
             val intent = Intent(this, BuscarIngredientes::class.java)
             startActivity(intent)
             finish()
-        }, 5000)
+        }, 3000)
     }
 }

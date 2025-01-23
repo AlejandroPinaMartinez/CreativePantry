@@ -42,6 +42,15 @@
         <activity
             android:name=".PantallaInicio"
             android:exported="false" />
+        <activity
+            android:name=".Splash_Tutorial_1"
+            android:exported="false" />
+        <activity
+            android:name=".Splash_Tutorial_2"
+            android:exported="false" />
+        <activity
+            android:name=".Splash_Tutorial_3"
+            android:exported="false" />
     </application>
 
 </manifest>
