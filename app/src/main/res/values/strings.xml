@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">CreativePantry</string>
     <string name="perfil">Perfil</string>
-    <string name="guardados">guardadas</string>
-    <string name="premium">menu_premium</string>
-    <string name="ajustes">menu_ajustes</string>
+    <string name="guardados">Recetas guardadas</string>
+    <string name="premium">Premium</string>
+    <string name="ajustes">Ajustes i preferencias</string>
     <string name="close">Cerrar Menu</string>
-    <string name="open">Abrir Menu</string>">
-
+    <string name="open">Abrir Menu</string>
+    <string name="stats">Tendencies</string>>
+    <string name="inici">Inici</string>>
 </resources>

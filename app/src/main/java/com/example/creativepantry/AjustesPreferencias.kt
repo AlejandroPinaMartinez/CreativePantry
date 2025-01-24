@@ -33,11 +33,11 @@ class AjustesPreferencias : AppCompatActivity() {
                     startActivity(intent)
                 }
                 R.id.menu_inici -> {
-                    val intent = Intent(this, PantallaInicio::class.java)
+                    val intent = Intent(this, BuscarIngredientes::class.java)
                     startActivity(intent)
                 }
                 R.id.menu_perfil -> {
-                    val intent = Intent(this, PantallaInicio::class.java)
+                    val intent = Intent(this, Perfil::class.java)
                     startActivity(intent)
                 }
             }
@@ -61,6 +61,8 @@ class AjustesPreferencias : AppCompatActivity() {
         when (item.itemId) {
             R.id.menu_perfil -> {
                 Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, Perfil::class.java)
+                startActivity(intent)
             }
             R.id.menu_guardados -> {
                 Toast.makeText(this, "Guardados", Toast.LENGTH_SHORT).show()
@@ -68,13 +70,13 @@ class AjustesPreferencias : AppCompatActivity() {
                 startActivity(intent)
             }
             R.id.menu_premium-> {
-                Toast.makeText(this, "Resumen", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Premium", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, Filtrado::class.java)
                 startActivity(intent)
             }
             R.id.menu_ajustes -> {
-                Toast.makeText(this, "Mis Clases", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, Filtrado::class.java)
+                Toast.makeText(this, "Austes", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, AjustesPreferencias::class.java)
                 startActivity(intent)
             }
         }

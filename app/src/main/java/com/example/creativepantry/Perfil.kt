@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
-class Filtrado : AppCompatActivity() {
+class Perfil : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var recipeAdapter: RecipeAdapter
@@ -27,7 +27,7 @@ class Filtrado : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_filtrado)
+        setContentView(R.layout.activity_perfil)
 
         val menu=findViewById<BottomNavigationView>(R.id.menubottom)
         menu.setOnItemSelectedListener {

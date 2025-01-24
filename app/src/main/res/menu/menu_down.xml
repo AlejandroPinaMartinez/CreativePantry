@@ -1,14 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_stats"
-        android:title="@string/perfil"
+        android:title="@string/stats"
         android:icon="@drawable/analitics"/>
     <item
         android:id="@+id/menu_inici"
-        android:title="@string/guardados"
+        android:title="@string/inici"
         android:icon="@drawable/olla"/>
     <item
         android:id="@+id/menu_perfil"
-        android:title="@string/premium"
+        android:title="@string/perfil"
         android:icon="@drawable/user"/>
 </menu>
