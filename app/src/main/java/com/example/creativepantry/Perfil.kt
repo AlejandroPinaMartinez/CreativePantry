@@ -91,6 +91,11 @@ class Perfil : AppCompatActivity() {
                 val intent = Intent(this, AjustesPreferencias::class.java)
                 startActivity(intent)
             }
+            R.id.menu_tutorial -> {
+                Toast.makeText(this, "Tutorial", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, Splash_Tutorial_1::class.java)
+                startActivity(intent)
+            }
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
@@ -111,7 +116,7 @@ class Perfil : AppCompatActivity() {
 
     private fun cargarRecetas(): List<Receta> {
         return listOf(
-            Receta("Arroz a la cubana", 4.8f, 20, "plato1", true), // Solo el nombre de la imagen, sin @drawable
+            Receta("Arroz a la cubana", 4.8f, 20, "plato1", true),
             Receta("Bacalao", 3.3f, 30, "plato2", false)
         )
     }

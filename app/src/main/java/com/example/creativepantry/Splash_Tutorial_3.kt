@@ -15,12 +15,7 @@ class Splash_Tutorial_3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_splash_tutorial3)
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.bottom_bar_container, BarraInferiorOpcions())
-            .commit()
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.top_bar_container, FragmentBarraSuperiorOpciones())
-            .commit()
+
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, BuscarIngredientes::class.java)
             startActivity(intent)

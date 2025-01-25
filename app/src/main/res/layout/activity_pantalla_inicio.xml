@@ -12,11 +12,12 @@
         android:layout_width="400dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:layout_marginBottom="50dp"
         android:src="@drawable/logo" />
 
     <Button
+        android:id="@+id/btnIniciarSesion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Inicia Sesión"
@@ -26,6 +27,7 @@
         android:layout_marginBottom="8dp"/>
 
     <Button
+        android:id="@+id/btnRegistro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Registrarse"
@@ -34,10 +36,12 @@
         android:textColor="#FFFFFF"
         android:layout_marginBottom="16dp"/>
 
-    <TextView
+    <Button
+        android:id="@+id/btnInvitado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Continua como invitado..."
+        android:backgroundTint="@color/marron_claro"
         android:textColor="@color/verde"
         android:fontFamily="@font/asar"
         android:layout_gravity="center"/>

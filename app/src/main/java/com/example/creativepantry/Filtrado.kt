@@ -44,6 +44,7 @@ class Filtrado : AppCompatActivity() {
                     val intent = Intent(this, Perfil::class.java)
                     startActivity(intent)
                 }
+
             }
             true
         }
@@ -89,6 +90,11 @@ class Filtrado : AppCompatActivity() {
             R.id.menu_ajustes -> {
                 Toast.makeText(this, "Ajustes", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, AjustesPreferencias::class.java)
+                startActivity(intent)
+            }
+            R.id.menu_tutorial -> {
+                Toast.makeText(this, "Tutorial", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, Splash_Tutorial_1::class.java)
                 startActivity(intent)
             }
         }

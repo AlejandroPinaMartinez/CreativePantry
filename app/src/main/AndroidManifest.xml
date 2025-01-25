@@ -13,7 +13,7 @@
         android:theme="@style/Theme.CreativePantry"
         tools:targetApi="31">
         <activity
-            android:name=".Perfil"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,13 +22,13 @@
             </intent-filter>
         </activity> <!-- Pantallas internas -->
         <activity
-            android:name=".Filtrado"
-            android:exported="false" />
-        <activity
-            android:name=".SplashActivity"
+            android:name=".Perfil"
             android:exported="false" />
         <activity
             android:name=".BuscarIngredientes"
+            android:exported="false" />
+        <activity
+            android:name=".Filtrado"
             android:exported="false" />
         <activity
             android:name=".AjustesPreferencias"

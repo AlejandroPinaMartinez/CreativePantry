@@ -78,6 +78,11 @@ class Detall : AppCompatActivity() {
                 val intent = Intent(this, AjustesPreferencias::class.java)
                 startActivity(intent)
             }
+            R.id.menu_tutorial -> {
+                Toast.makeText(this, "Tutorial", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, Splash_Tutorial_1::class.java)
+                startActivity(intent)
+            }
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true

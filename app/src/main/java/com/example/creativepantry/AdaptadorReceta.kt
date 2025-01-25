@@ -1,6 +1,7 @@
 package com.example.creativepantry
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,6 +31,7 @@ class RecipeAdapter(
         private val ivRecetaImagen: ImageView = itemView.findViewById(R.id.ivRecipeImage)
         private val tvRecetaTitulo: TextView = itemView.findViewById(R.id.tvRecetaTitulo)
         private val tvRecetaDetalles: TextView = itemView.findViewById(R.id.tvRecetaDetalles)
+        private val btnVerReceta: View = itemView.findViewById(R.id.btnReceta)
 
         fun bind(receta: Receta) {
             tvRecetaTitulo.text = receta.titulo
@@ -41,6 +43,11 @@ class RecipeAdapter(
                 ivRecetaImagen.setImageResource(resource_id)
             } else {
                 ivRecetaImagen.setImageResource(R.drawable.plato1)
+            }
+
+            btnVerReceta.setOnClickListener {
+                val intent = Intent(context, Detall::class.java)
+                context.startActivity(intent)
             }
         }
     }

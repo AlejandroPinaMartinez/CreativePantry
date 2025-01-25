@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -26,6 +27,12 @@ class BuscarIngredientes : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_buscar_ingredientes)
 
+        val searchIcon = findViewById<ImageView>(R.id.search_icon)
+
+        searchIcon.setOnClickListener {
+            val intent = Intent(this, Filtrado::class.java)
+            startActivity(intent)
+        }
 
         val menu=findViewById<BottomNavigationView>(R.id.menubottom)
         menu.setOnItemSelectedListener {
@@ -79,6 +86,11 @@ class BuscarIngredientes : AppCompatActivity() {
             R.id.menu_ajustes -> {
                 Toast.makeText(this, "Ajustes", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, AjustesPreferencias::class.java)
+                startActivity(intent)
+            }
+            R.id.menu_tutorial -> {
+                Toast.makeText(this, "Tutorial", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, Splash_Tutorial_1::class.java)
                 startActivity(intent)
             }
         }

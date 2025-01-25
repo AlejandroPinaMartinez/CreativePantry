@@ -38,8 +38,10 @@
             android:textColor="@color/verde"
             app:layout_constraintTop_toBottomOf="@id/main_toolbar"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp" />
 
+        <!-- Campo de texto y lupa centrados -->
         <EditText
             android:id="@+id/edit_ingredients"
             android:layout_width="0dp"
@@ -53,8 +55,10 @@
             android:textColorHint="@color/verde"
             app:layout_constraintTop_toBottomOf="@id/title_ingredients"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/search_icon"/>
-
+            app:layout_constraintEnd_toStartOf="@id/search_icon"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"/>
 
         <ImageView
             android:id="@+id/search_icon"
@@ -66,8 +70,12 @@
             android:contentDescription="Buscar ingredientes"
             app:layout_constraintTop_toTopOf="@id/edit_ingredients"
             app:layout_constraintBottom_toBottomOf="@id/edit_ingredients"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintStart_toEndOf="@id/edit_ingredients"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp" />
 
+        <!-- Visto recientemente -->
         <TextView
             android:id="@+id/recent_viewed"
             android:layout_width="wrap_content"
@@ -77,7 +85,9 @@
             android:fontFamily="@font/asar"
             android:textColor="@color/verde"
             app:layout_constraintTop_toBottomOf="@id/edit_ingredients"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"/>
 
         <HorizontalScrollView
             android:layout_width="0dp"
@@ -90,7 +100,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="16dp">
 
                 <ImageView
                     android:layout_width="80dp"
