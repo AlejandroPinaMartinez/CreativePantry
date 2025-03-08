@@ -18,4 +18,7 @@ interface RetrofitService {
     @DELETE("/recetas/{receta_id}")
     suspend fun deleteReceta(@Path("receta_id") recetaId: Int): Response<Unit>
 
+    @GET("/recetas")
+    suspend fun getRecetas(): Response<List<Receta>>
+
 }

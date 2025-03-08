@@ -1,6 +1,7 @@
 package com.example.creativepantry
 
 import Receta
+import RecetaViewModel
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -13,10 +14,15 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class RecipeAdapter(
-    private val recipeList: List<Receta>,
+    private var recipeList: List<Receta>,
     private val context: Context,
     private val viewModel: RecetaViewModel
 ) : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
+
+    fun updateRecetas(nuevaLista: List<Receta>) {
+        recipeList = nuevaLista
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_receta, parent, false)
@@ -24,8 +30,7 @@ class RecipeAdapter(
     }
 
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
-        val recipe = recipeList[position]
-        holder.bind(recipe)
+        holder.bind(recipeList[position])
     }
 
     override fun getItemCount(): Int = recipeList.size
@@ -40,7 +45,6 @@ class RecipeAdapter(
         private val tvRecetaTitulo: TextView = itemView.findViewById(R.id.tvRecetaTitulo)
         private val tvRecetaDetalles: TextView = itemView.findViewById(R.id.tvRecetaDetalles)
         private val btnVerReceta: Button = itemView.findViewById(R.id.btnReceta)
-        private val btnAddReceta: Button = itemView.findViewById(R.id.btnAddReceta)
         private val btnDeleteReceta: Button = itemView.findViewById(R.id.btnDeleteReceta)
 
         fun bind(receta: Receta) {
@@ -48,23 +52,22 @@ class RecipeAdapter(
             tvRecetaDetalles.text = "${receta.puntuacion}★  ${receta.tiempo}m"
 
             val resourceId = context.resources.getIdentifier(receta.imagen, "drawable", context.packageName)
-            ivRecetaImagen.setImageResource(if (resourceId != 0) resourceId else R.drawable.plato1)
-
-            btnVerReceta.setOnClickListener {
-                val intent = Intent(context, Detall::class.java)
-                intent.putExtra("titulo", receta.titulo)
-                intent.putExtra("puntuacion", receta.puntuacion)
-                intent.putExtra("tiempo", receta.tiempo)
-                intent.putExtra("imagen", receta.imagen)
-                intent.putStringArrayListExtra("ingredientes", ArrayList(receta.ingredientes))
-                intent.putStringArrayListExtra("pasos", ArrayList(receta.pasos))
-                context.startActivity(intent)
+            if (resourceId != 0) {
+                ivRecetaImagen.setImageResource(resourceId)
+            } else {
+                ivRecetaImagen.setImageResource(R.drawable.plato1)
             }
 
-
-            btnAddReceta.setOnClickListener {
-                viewModel.addReceta(receta)
-                Toast.makeText(context, "Añadiendo receta: ${receta.titulo}", Toast.LENGTH_SHORT).show()
+            btnVerReceta.setOnClickListener {
+                val intent = Intent(context, Detall::class.java).apply {
+                    putExtra("titulo", receta.titulo)
+                    putExtra("puntuacion", receta.puntuacion)
+                    putExtra("tiempo", receta.tiempo)
+                    putExtra("imagen", receta.imagen)
+                    putStringArrayListExtra("ingredientes", ArrayList(receta.ingredientes))
+                    putStringArrayListExtra("pasos", ArrayList(receta.pasos))
+                }
+                context.startActivity(intent)
             }
 
             btnDeleteReceta.setOnClickListener {

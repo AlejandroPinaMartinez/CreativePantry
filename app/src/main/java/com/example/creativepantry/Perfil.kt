@@ -1,6 +1,7 @@
 package com.example.creativepantry
 
 import Receta
+import RecetaViewModel
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log

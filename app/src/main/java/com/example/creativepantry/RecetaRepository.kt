@@ -6,6 +6,10 @@ import retrofit2.Response
 
 class RecetaRepository {
 
+    suspend fun getRecetas(): Response<List<Receta>> {
+        return RetrofitClient.instance.getRecetas()
+    }
+
     suspend fun getReceta(recetaId: Int): Response<Receta> {
         return RetrofitClient.instance.getReceta(recetaId)
     }
@@ -14,8 +18,9 @@ class RecetaRepository {
         return RetrofitClient.instance.addReceta(receta)
     }
 
-    suspend fun deleteReceta(recetaId: Int): Response<Unit> {
+    suspend fun deleteReceta(recetaId: Int): Response<Void> {  // Se cambió de Unit a Void
         return RetrofitClient.instance.deleteReceta(recetaId)
     }
 }
+
 

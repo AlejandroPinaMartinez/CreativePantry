@@ -8,3 +8,4 @@ data class Receta(
     val ingredientes: List<String> = emptyList(),
     val pasos: List<String> = emptyList()
 )
+
