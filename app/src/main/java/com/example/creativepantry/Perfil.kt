@@ -60,11 +60,16 @@ class Perfil : AppCompatActivity() {
         val navigationView: NavigationView =findViewById(R.id.navigationView)
         navigationView.setNavigationItemSelectedListener(this::navigationItemSelectedListener)
 
+        val retrofitService = RetrofitClient.instance
+        val repository = RecetaRepository()
+        val recetaViewModel = RecetaViewModel(repository)
+
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val listaRecetas = cargarRecetas()
-        recipeAdapter = RecipeAdapter(listaRecetas, this) // Asegúrate de pasar el contexto aquí
+
+        recipeAdapter = RecipeAdapter(listaRecetas, this, recetaViewModel)
         recyclerView.adapter = recipeAdapter
 
     }
@@ -116,8 +121,8 @@ class Perfil : AppCompatActivity() {
 
     private fun cargarRecetas(): List<Receta> {
         return listOf(
-            Receta("Arroz a la cubana", 4.8f, 20, "plato1", true),
-            Receta("Bacalao", 3.3f, 30, "plato2", false)
+            Receta( 1,"Arroz a la cubana", 4.8f, 20, "plato1", true),
+            Receta(2, "Bacalao", 3.3f, 30, "plato2", false)
         )
     }
 }

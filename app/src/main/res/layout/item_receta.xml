@@ -46,14 +46,46 @@
                 android:textSize="14sp" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnReceta"
-            android:layout_width="60dp"
+        <!-- Aquí empieza la parte modificada -->
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/verde"
-            android:fontFamily="@font/asar"
-            android:text=">"
-            android:textColor="#F2E5E5"
-            android:textSize="25sp" />
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnReceta"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/verde"
+                android:fontFamily="@font/asar"
+                android:text=">"
+                android:textColor="#F2E5E5"
+                android:textSize="25sp"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnAddReceta"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/verde"
+                android:fontFamily="@font/asar"
+                android:text="+"
+                android:textColor="#F2E5E5"
+                android:textSize="25sp"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnDeleteReceta"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/verde"
+                android:fontFamily="@font/asar"
+                android:text="-"
+                android:textColor="#F2E5E5"
+                android:textSize="25sp"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>

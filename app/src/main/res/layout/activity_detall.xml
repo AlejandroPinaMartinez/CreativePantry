@@ -102,7 +102,7 @@
             android:fontFamily="@font/asar"
             android:text="1. Cocinar el arroz en agua con sal por 20 minutos.\n2. Freír el huevo en aceite.\n3. Preparar la salsa de tomate.\n4. Servir todo junto y disfrutar."
             android:textColor="@color/verde"
-            android:textSize="16sp" />
+            android:textSize="16dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
