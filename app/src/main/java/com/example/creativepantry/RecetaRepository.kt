@@ -18,7 +18,7 @@ class RecetaRepository {
         return RetrofitClient.instance.addReceta(receta)
     }
 
-    suspend fun deleteReceta(recetaId: Int): Response<Void> {  // Se cambió de Unit a Void
+    suspend fun deleteReceta(recetaId: Int): Response<Void> {
         return RetrofitClient.instance.deleteReceta(recetaId)
     }
 }
