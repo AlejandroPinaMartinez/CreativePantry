@@ -1,6 +1,6 @@
 package com.example.creativepantry.api
 
-import com.example.creativepantry.Receta
+import Receta
 import retrofit2.Response
 import retrofit2.http.*
 

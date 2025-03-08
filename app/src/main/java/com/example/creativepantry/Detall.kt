@@ -1,9 +1,12 @@
 package com.example.creativepantry
 
+import Receta
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -23,6 +26,30 @@ class Detall : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_detall)
+
+        val tvTitulo: TextView = findViewById(R.id.tvRecetaTitulo)
+        val tvPuntuacion: TextView = findViewById(R.id.tvRecetaPuntuacion)
+        val tvTiempo: TextView = findViewById(R.id.tvRecetaTiempo)
+        val ivImagen: ImageView = findViewById(R.id.ivRecetaImagen)
+        val tvIngredientes: TextView = findViewById(R.id.tvIngredientes)
+        val tvPasos: TextView = findViewById(R.id.tvPasos)
+
+        val titulo = intent.getStringExtra("titulo") ?: "Sin título"
+        val puntuacion = intent.getFloatExtra("puntuacion", 0.0f)
+        val tiempo = intent.getIntExtra("tiempo", 0)
+        val imagen = intent.getStringExtra("imagen") ?: "plato1"
+        val ingredientes = intent.getStringArrayListExtra("ingredientes") ?: arrayListOf()
+        val pasos = intent.getStringArrayListExtra("pasos") ?: arrayListOf()
+
+        tvTitulo.text = titulo
+        tvPuntuacion.text = "Puntuación: $puntuacion★"
+        tvTiempo.text = "Tiempo: $tiempo min"
+
+        val resourceId = resources.getIdentifier(imagen, "drawable", packageName)
+        ivImagen.setImageResource(if (resourceId != 0) resourceId else R.drawable.plato1)
+
+        tvIngredientes.text = ingredientes.joinToString("\n• ", "Ingredientes:\n• ")
+        tvPasos.text = pasos.joinToString("\n\n", "Pasos:\n")
 
         val menu=findViewById<BottomNavigationView>(R.id.menubottom)
         menu.setOnItemSelectedListener {

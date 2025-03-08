@@ -1,5 +1,6 @@
 package com.example.creativepantry
 
+import Receta
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -55,8 +56,11 @@ class RecipeAdapter(
                 intent.putExtra("puntuacion", receta.puntuacion)
                 intent.putExtra("tiempo", receta.tiempo)
                 intent.putExtra("imagen", receta.imagen)
+                intent.putStringArrayListExtra("ingredientes", ArrayList(receta.ingredientes))
+                intent.putStringArrayListExtra("pasos", ArrayList(receta.pasos))
                 context.startActivity(intent)
             }
+
 
             btnAddReceta.setOnClickListener {
                 viewModel.addReceta(receta)

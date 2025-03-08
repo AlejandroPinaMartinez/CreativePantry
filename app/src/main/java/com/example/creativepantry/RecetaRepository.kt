@@ -1,7 +1,7 @@
 package com.example.creativepantry
 
+import Receta
 import com.example.creativepantry.RetrofitClient
-import com.example.creativepantry.Receta
 import retrofit2.Response
 
 class RecetaRepository {
