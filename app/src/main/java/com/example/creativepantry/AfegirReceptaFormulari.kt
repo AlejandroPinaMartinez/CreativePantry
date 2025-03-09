@@ -27,6 +27,7 @@ class AfegirReceptaFormulari : AppCompatActivity() {
         val btnAddPaso = findViewById<Button>(R.id.btnAddPaso)
         val btnGuardar = findViewById<Button>(R.id.btnGuardarReceta)
 
+        // Agregar ingredientes
         btnAddIngrediente.setOnClickListener {
             val nuevoIngrediente = EditText(this).apply {
                 hint = "Ingrediente"
@@ -36,6 +37,7 @@ class AfegirReceptaFormulari : AppCompatActivity() {
             layoutIngredientes.addView(nuevoIngrediente)
         }
 
+        // Agregar pasos
         btnAddPaso.setOnClickListener {
             val nuevoPaso = EditText(this).apply {
                 hint = "Paso"
@@ -45,10 +47,12 @@ class AfegirReceptaFormulari : AppCompatActivity() {
             layoutPasos.addView(nuevoPaso)
         }
 
+        // Guardar receta
         btnGuardar.setOnClickListener {
             val nombreReceta = editNombre.text.toString().trim()
             val urlImagen = editUrlImagen.text.toString().trim()  // Obtener la URL de la imagen
 
+            // Validar que el nombre de la receta no esté vacío
             if (nombreReceta.isEmpty()) {
                 Toast.makeText(this, "El nombre de la receta no puede estar vacío", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -60,6 +64,7 @@ class AfegirReceptaFormulari : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            // Crear la lista de ingredientes
             val ingredientes = ArrayList<String>()
             for (i in 0 until layoutIngredientes.childCount) {
                 val editText = layoutIngredientes.getChildAt(i) as EditText
@@ -69,6 +74,7 @@ class AfegirReceptaFormulari : AppCompatActivity() {
                 }
             }
 
+            // Crear la lista de pasos
             val pasos = ArrayList<String>()
             for (i in 0 until layoutPasos.childCount) {
                 val editText = layoutPasos.getChildAt(i) as EditText
@@ -78,6 +84,7 @@ class AfegirReceptaFormulari : AppCompatActivity() {
                 }
             }
 
+            // Crear la receta
             val nuevaReceta = Receta(
                 id = 0,
                 titulo = nombreReceta,
@@ -89,8 +96,10 @@ class AfegirReceptaFormulari : AppCompatActivity() {
                 pasos = pasos
             )
 
+            // Añadir la receta
             recetaViewModel.addReceta(nuevaReceta)
 
+            // Observar el estado del error o éxito
             recetaViewModel.error.observe(this) { errorMsg ->
                 if (errorMsg == null) {
                     Toast.makeText(applicationContext, "Receta añadida con éxito", Toast.LENGTH_SHORT).show()

@@ -14,8 +14,10 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.creativepantry.repository.RecetaRepository
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
@@ -65,7 +67,8 @@ class Filtrado : AppCompatActivity() {
         navigationView.setNavigationItemSelectedListener(this::navigationItemSelectedListener)
 
         val repository = RecetaRepository()
-        recetaViewModel = RecetaViewModel(repository)
+        recetaViewModel = ViewModelProvider(this)[RecetaViewModel::class.java]
+
 
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)

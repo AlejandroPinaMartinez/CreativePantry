@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -14,8 +15,10 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.creativepantry.repository.RecetaRepository
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
@@ -32,6 +35,14 @@ class Perfil : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_perfil)
+
+        // Botón "Añadir Receta"
+        val btnAddRecipe: Button = findViewById(R.id.btnAddRecipe)
+        btnAddRecipe.setOnClickListener {
+            // Intent para abrir la actividad AñadirReceta
+            val intent = Intent(this, AfegirReceptaFormulari::class.java)
+            startActivity(intent)
+        }
 
         val menu = findViewById<BottomNavigationView>(R.id.menubottom)
         menu.setOnItemSelectedListener {
@@ -64,7 +75,7 @@ class Perfil : AppCompatActivity() {
         val navigationView: NavigationView = findViewById(R.id.navigationView)
         navigationView.setNavigationItemSelectedListener(this::navigationItemSelectedListener)
 
-        recetaViewModel = RecetaViewModel(RecetaRepository())
+        recetaViewModel = ViewModelProvider(this)[RecetaViewModel::class.java]
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -123,4 +134,3 @@ class Perfil : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 }
-

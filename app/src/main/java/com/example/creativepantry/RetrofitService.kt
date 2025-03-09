@@ -13,12 +13,11 @@ interface RetrofitService {
     suspend fun getReceta(@Path("receta_id") recetaId: Int): Response<Receta>
 
     @POST("/recetas")
-    suspend fun addReceta(@Body receta: Receta): Response<Receta>
+    suspend fun addReceta(@Body receta: Receta): Response<Void>
 
     @DELETE("/recetas/{receta_id}")
-    suspend fun deleteReceta(@Path("receta_id") recetaId: Int): Response<Void>
+    suspend fun deleteReceta(@Path("receta_id") recetaId: Int): Response<Map<String, Any>>  // Cambiado a Map<String, Any>
 
     @GET("/recetas")
     suspend fun getRecetas(): Response<List<Receta>>
-
 }
