@@ -8,7 +8,7 @@ import kotlinx.coroutines.launch
 
 class RecetaViewModel : ViewModel() {
 
-    private val repository = RecetaRepository()  // Inicializar el repositorio directamente
+    private val repository = RecetaRepository()
 
     private val _recetas = MutableLiveData<List<Receta>>()
     val recetas: LiveData<List<Receta>> get() = _recetas
@@ -34,17 +34,14 @@ class RecetaViewModel : ViewModel() {
     fun addReceta(receta: Receta) {
         viewModelScope.launch {
             try {
-                // Registra lo que estás enviando para depurar
                 Log.d("RecetaViewModel", "Enviando receta: $receta")
 
-                // Envía la receta al repositorio
                 val response = repository.addReceta(receta)
 
-                // Registra el código de respuesta de la API para depurar
                 Log.d("RecetaViewModel", "Código de respuesta: ${response.code()}")
 
                 if (response.isSuccessful) {
-                    cargarRecetas()  // Recarga las recetas si la creación fue exitosa
+                    cargarRecetas()
                 } else {
                     _error.postValue("Error al añadir receta: ${response.errorBody()?.string()}")
                 }

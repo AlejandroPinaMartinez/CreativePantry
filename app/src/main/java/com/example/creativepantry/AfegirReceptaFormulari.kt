@@ -20,14 +20,13 @@ class AfegirReceptaFormulari : AppCompatActivity() {
         recetaViewModel = ViewModelProvider(this)[RecetaViewModel::class.java]
 
         val editNombre = findViewById<EditText>(R.id.nombreReceta)
-        val editUrlImagen = findViewById<EditText>(R.id.urlImagenReceta)  // Campo para URL de la imagen
+        val editUrlImagen = findViewById<EditText>(R.id.urlImagenReceta)
         val layoutIngredientes = findViewById<LinearLayout>(R.id.layoutIngredientes)
         val layoutPasos = findViewById<LinearLayout>(R.id.layoutPasos)
         val btnAddIngrediente = findViewById<Button>(R.id.btnAddIngrediente)
         val btnAddPaso = findViewById<Button>(R.id.btnAddPaso)
         val btnGuardar = findViewById<Button>(R.id.btnGuardarReceta)
 
-        // Agregar ingredientes
         btnAddIngrediente.setOnClickListener {
             val nuevoIngrediente = EditText(this).apply {
                 hint = "Ingrediente"
@@ -37,7 +36,6 @@ class AfegirReceptaFormulari : AppCompatActivity() {
             layoutIngredientes.addView(nuevoIngrediente)
         }
 
-        // Agregar pasos
         btnAddPaso.setOnClickListener {
             val nuevoPaso = EditText(this).apply {
                 hint = "Paso"
@@ -47,24 +45,20 @@ class AfegirReceptaFormulari : AppCompatActivity() {
             layoutPasos.addView(nuevoPaso)
         }
 
-        // Guardar receta
         btnGuardar.setOnClickListener {
             val nombreReceta = editNombre.text.toString().trim()
-            val urlImagen = editUrlImagen.text.toString().trim()  // Obtener la URL de la imagen
+            val urlImagen = editUrlImagen.text.toString().trim()
 
-            // Validar que el nombre de la receta no esté vacío
             if (nombreReceta.isEmpty()) {
                 Toast.makeText(this, "El nombre de la receta no puede estar vacío", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            // Validar que la URL no esté vacía
             if (urlImagen.isEmpty()) {
                 Toast.makeText(this, "La URL de la imagen no puede estar vacía", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            // Crear la lista de ingredientes
             val ingredientes = ArrayList<String>()
             for (i in 0 until layoutIngredientes.childCount) {
                 val editText = layoutIngredientes.getChildAt(i) as EditText
@@ -74,7 +68,6 @@ class AfegirReceptaFormulari : AppCompatActivity() {
                 }
             }
 
-            // Crear la lista de pasos
             val pasos = ArrayList<String>()
             for (i in 0 until layoutPasos.childCount) {
                 val editText = layoutPasos.getChildAt(i) as EditText
@@ -84,7 +77,6 @@ class AfegirReceptaFormulari : AppCompatActivity() {
                 }
             }
 
-            // Crear la receta
             val nuevaReceta = Receta(
                 id = 0,
                 titulo = nombreReceta,
@@ -96,10 +88,8 @@ class AfegirReceptaFormulari : AppCompatActivity() {
                 pasos = pasos
             )
 
-            // Añadir la receta
             recetaViewModel.addReceta(nuevaReceta)
 
-            // Observar el estado del error o éxito
             recetaViewModel.error.observe(this) { errorMsg ->
                 if (errorMsg == null) {
                     Toast.makeText(applicationContext, "Receta añadida con éxito", Toast.LENGTH_SHORT).show()
