@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/verde"
                 android:fontFamily="@font/asar"
-                android:text="-"
+                android:text="E"
                 android:textColor="#F2E5E5"
                 android:textSize="25sp"/>
 

@@ -71,8 +71,22 @@ class RecipeAdapter(
             }
 
             btnDeleteReceta.setOnClickListener {
-                viewModel.deleteReceta(receta.id)
-                Toast.makeText(context, "Eliminando receta: ${receta.titulo}", Toast.LENGTH_SHORT).show()
+                val builder = androidx.appcompat.app.AlertDialog.Builder(context)
+                builder.setTitle("Confirmar eliminación")
+                builder.setMessage("¿Estás seguro de que quieres eliminar la receta ${receta.titulo}?")
+
+                builder.setPositiveButton("Eliminar") { dialog, _ ->
+                    viewModel.deleteReceta(receta.id)
+                    Toast.makeText(context, "Receta eliminada", Toast.LENGTH_SHORT).show()
+                    dialog.dismiss()
+                }
+
+                builder.setNegativeButton("Cancelar") { dialog, _ ->
+                    dialog.dismiss()
+                }
+
+                val dialog = builder.create()
+                dialog.show()
             }
         }
     }
