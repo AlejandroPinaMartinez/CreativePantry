@@ -51,14 +51,14 @@ class RecetaViewModel : ViewModel() {
         }
     }
 
-
-
-    fun deleteReceta(recetaId: Int) {
+    fun deleteReceta(id_receta: Int) {
         viewModelScope.launch {
             try {
-                val response = repository.deleteReceta(recetaId)
+                val response = repository.deleteReceta(id_receta)
+                Log.d("DeleteReceta", "Código de respuesta: ${response.code()} - Cuerpo: ${response.body()}")
+
                 if (response.isSuccessful) {
-                    cargarRecetas()
+                    _recetas.value = _recetas.value?.filter { it.id_receta != id_receta }
                 } else {
                     _error.postValue("Error al eliminar receta: ${response.errorBody()?.string()}")
                 }
@@ -67,4 +67,21 @@ class RecetaViewModel : ViewModel() {
             }
         }
     }
+
+    fun updateReceta(id_receta: Int, receta: Receta) {
+        viewModelScope.launch {
+            try {
+                val response = repository.updateReceta(id_receta, receta)
+                if (response.isSuccessful) {
+                    cargarRecetas()
+                } else {
+                    _error.postValue("Error al actualizar receta: ${response.errorBody()?.string()}")
+                }
+            } catch (e: Exception) {
+                _error.postValue("Error de conexión: ${e.message}")
+            }
+        }
+    }
+
+
 }

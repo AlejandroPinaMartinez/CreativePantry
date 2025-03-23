@@ -20,4 +20,8 @@ interface RetrofitService {
 
     @GET("/recetas")
     suspend fun getRecetas(): Response<List<Receta>>
+
+    @PUT("/recetas/{receta_id}")
+    suspend fun updateReceta(@Path("receta_id") recetaId: Int, @Body receta: Receta): Response<Void>
+
 }

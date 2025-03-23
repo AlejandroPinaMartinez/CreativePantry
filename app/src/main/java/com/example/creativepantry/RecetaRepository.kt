@@ -15,6 +15,10 @@ class RecetaRepository {
     suspend fun addReceta(receta: Receta): Response<Void> =
         RetrofitClient.instance.addReceta(receta)
 
-    suspend fun deleteReceta(recetaId: Int): Response<Map<String, Any>> =
-        RetrofitClient.instance.deleteReceta(recetaId)
+    suspend fun deleteReceta(id_receta: Int): Response<Map<String, Any>> =
+        RetrofitClient.instance.deleteReceta(id_receta)
+
+    suspend fun updateReceta(id_receta: Int, receta: Receta): Response<Void> =
+        RetrofitClient.instance.updateReceta(id_receta, receta)
+
 }

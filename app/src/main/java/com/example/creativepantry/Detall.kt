@@ -1,6 +1,5 @@
 package com.example.creativepantry
 
-import Receta
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -14,13 +13,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
 class Detall : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
-    private lateinit var  toolbar : Toolbar
+    private lateinit var toolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,32 +46,38 @@ class Detall : AppCompatActivity() {
         tvPuntuacion.text = "Puntuación: $puntuacion★"
         tvTiempo.text = "Tiempo: $tiempo min"
 
-        val resourceId = resources.getIdentifier(imagen, "drawable", packageName)
-        ivImagen.setImageResource(if (resourceId != 0) resourceId else R.drawable.plato1)
+        // Cargar imagen con Glide
+        if (imagen.startsWith("http") || imagen.startsWith("content")) {
+            Glide.with(this)
+                .load(imagen)
+                .placeholder(R.drawable.plato1) // Imagen por defecto mientras carga
+                .error(R.drawable.plato1) // Imagen en caso de error
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(ivImagen)
+        } else {
+            val resourceId = resources.getIdentifier(imagen, "drawable", packageName)
+            Glide.with(this)
+                .load(resourceId.takeIf { it != 0 } ?: R.drawable.plato1)
+                .placeholder(R.drawable.plato1)
+                .error(R.drawable.plato1)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(ivImagen)
+        }
 
         tvIngredientes.text = ingredientes.joinToString("\n• ", "Ingredientes:\n• ")
         tvPasos.text = pasos.joinToString("\n\n", "Pasos:\n")
 
-        val menu=findViewById<BottomNavigationView>(R.id.menubottom)
+        val menu = findViewById<BottomNavigationView>(R.id.menubottom)
         menu.setOnItemSelectedListener {
-            when (it.itemId){
-                R.id.menu_stats -> {
-                    val intent = Intent(this, PantallaInicio::class.java)
-                    startActivity(intent)
-                }
-                R.id.menu_inici -> {
-                    val intent = Intent(this, BuscarIngredientes::class.java)
-                    startActivity(intent)
-                }
-                R.id.menu_perfil -> {
-                    val intent = Intent(this, Perfil::class.java)
-                    startActivity(intent)
-                }
+            when (it.itemId) {
+                R.id.menu_stats -> startActivity(Intent(this, PantallaInicio::class.java))
+                R.id.menu_inici -> startActivity(Intent(this, BuscarIngredientes::class.java))
+                R.id.menu_perfil -> startActivity(Intent(this, Perfil::class.java))
             }
             true
         }
 
-        toolbar=findViewById(R.id.main_toolbar)
+        toolbar = findViewById(R.id.main_toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -79,52 +86,51 @@ class Detall : AppCompatActivity() {
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        val navigationView: NavigationView =findViewById(R.id.navigationView)
+        val navigationView: NavigationView = findViewById(R.id.navigationView)
         navigationView.setNavigationItemSelectedListener(this::navigationItemSelectedListener)
-
     }
+
     private fun navigationItemSelectedListener(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.menu_perfil -> {
-                Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, Perfil::class.java)
-                startActivity(intent)
+                showToast("Perfil")
+                startActivity(Intent(this, Perfil::class.java))
             }
             R.id.menu_guardados -> {
-                Toast.makeText(this, "Guardados", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, Filtrado::class.java)
-                startActivity(intent)
+                showToast("Guardados")
+                startActivity(Intent(this, Filtrado::class.java))
             }
-            R.id.menu_premium-> {
-                Toast.makeText(this, "Premium", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, Filtrado::class.java)
-                startActivity(intent)
+            R.id.menu_premium -> {
+                showToast("Premium")
+                startActivity(Intent(this, Filtrado::class.java))
             }
             R.id.menu_ajustes -> {
-                Toast.makeText(this, "Ajustes", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, AjustesPreferencias::class.java)
-                startActivity(intent)
+                showToast("Ajustes")
+                startActivity(Intent(this, AjustesPreferencias::class.java))
             }
             R.id.menu_tutorial -> {
-                Toast.makeText(this, "Tutorial", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, Splash_Tutorial_1::class.java)
-                startActivity(intent)
+                showToast("Tutorial")
+                startActivity(Intent(this, Splash_Tutorial_1::class.java))
             }
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
 
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
     override fun onSupportNavigateUp(): Boolean {
         supportFragmentManager.popBackStack()
-        if (supportFragmentManager.fragments.size<=2){
+        if (supportFragmentManager.fragments.size <= 2) {
             supportActionBar?.setDisplayHomeAsUpEnabled(false)
         }
         return super.onSupportNavigateUp()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        Log.i("onOptionsItemSelected",item.itemId.toString())
+        Log.i("onOptionsItemSelected", item.itemId.toString())
         return super.onOptionsItemSelected(item)
     }
 }

@@ -1,5 +1,5 @@
 data class Receta(
-    val id: Int,
+    val id_receta: Int? = null,
     val titulo: String,
     val puntuacion: Float,
     val tiempo: Int,
