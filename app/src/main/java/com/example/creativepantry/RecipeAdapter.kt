@@ -20,6 +20,9 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class RecipeAdapter(
     private var recipeList: List<Receta>,
@@ -59,15 +62,13 @@ class RecipeAdapter(
             tvRecetaTitulo.text = receta.titulo
             tvRecetaDetalles.text = "${receta.puntuacion}★  ${receta.tiempo}m"
 
-            // Verifica que la URL de la imagen no sea nula o vacía
             val imageUrl = receta.imagen?.trim()
             if (!imageUrl.isNullOrEmpty()) {
-                // Cargar imagen con Glide, asegurando la correcta carga de imágenes externas
                 Glide.with(context)
                     .load(imageUrl)
-                    .placeholder(R.drawable.plato1) // Imagen mientras carga
-                    .error(R.drawable.plato1) // Imagen si hay error
-                    .diskCacheStrategy(DiskCacheStrategy.ALL) // Cache para evitar recargas
+                    .placeholder(R.drawable.plato1)
+                    .error(R.drawable.plato1)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .listener(object : RequestListener<Drawable> {
                         override fun onLoadFailed(
                             e: GlideException?,
@@ -86,15 +87,19 @@ class RecipeAdapter(
                             dataSource: DataSource?,
                             isFirstResource: Boolean
                         ): Boolean {
-                            return false // Glide manejará la imagen normalmente
+                            return false
                         }
                     })
                     .into(ivRecetaImagen)
             } else {
-                ivRecetaImagen.setImageResource(R.drawable.plato1) // Imagen si no hay URL
+                ivRecetaImagen.setImageResource(R.drawable.plato1)
             }
 
             btnVerReceta.setOnClickListener {
+                CoroutineScope(Dispatchers.IO).launch {
+                    (context.applicationContext as MainApp).registerClick(receta.id_receta)
+                }
+
                 val intent = Intent(context, Detall::class.java).apply {
                     putExtra("titulo", receta.titulo)
                     putExtra("puntuacion", receta.puntuacion)

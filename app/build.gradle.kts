@@ -51,10 +51,11 @@ dependencies {
 
     implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
-
     // Retrofit y Gson Converter
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    implementation ("androidx.datastore:datastore-preferences:1.0.0")
 
     // Corrutinas para llamadas asíncronas
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
