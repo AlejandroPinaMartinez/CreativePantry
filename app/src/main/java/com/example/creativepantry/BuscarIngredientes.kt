@@ -90,7 +90,7 @@ class BuscarIngredientes : AppCompatActivity() {
             }
             R.id.menu_tutorial -> {
                 Toast.makeText(this, "Tutorial", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, RecetaStats::class.java)
+                val intent = Intent(this, Grafic1::class.java)
                 startActivity(intent)
             }
         }

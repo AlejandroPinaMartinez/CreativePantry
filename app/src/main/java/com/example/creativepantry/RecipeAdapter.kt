@@ -96,9 +96,6 @@ class RecipeAdapter(
             }
 
             btnVerReceta.setOnClickListener {
-                CoroutineScope(Dispatchers.IO).launch {
-                    (context.applicationContext as MainApp).registerClick(receta.id_receta)
-                }
 
                 val intent = Intent(context, Detall::class.java).apply {
                     putExtra("titulo", receta.titulo)

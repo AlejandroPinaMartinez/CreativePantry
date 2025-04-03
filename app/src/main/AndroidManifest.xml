@@ -23,6 +23,9 @@
             android:name=".AfegirReceptaFormulari"
             android:exported="false" />
         <activity
+            android:name=".Grafic1"
+            android:exported="false" />
+        <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>

@@ -13,20 +13,30 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.example.creativepantry.analytics.UsageAnalyticsStorage
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import kotlinx.coroutines.launch
 
 class Detall : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
     private lateinit var toolbar: Toolbar
+    private lateinit var usageAnalyticsStorage: UsageAnalyticsStorage
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_detall)
+
+        usageAnalyticsStorage = UsageAnalyticsStorage(applicationContext)
+
+        lifecycleScope.launch {
+            usageAnalyticsStorage.incrementUsageCount("Detall")
+        }
 
         val tvTitulo: TextView = findViewById(R.id.tvRecetaTitulo)
         val tvPuntuacion: TextView = findViewById(R.id.tvRecetaPuntuacion)

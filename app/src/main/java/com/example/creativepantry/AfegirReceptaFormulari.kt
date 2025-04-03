@@ -8,14 +8,25 @@ import android.widget.*
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
+import com.example.creativepantry.analytics.UsageAnalyticsStorage
+import kotlinx.coroutines.launch
 
 class AfegirReceptaFormulari : AppCompatActivity() {
 
     private lateinit var recetaViewModel: RecetaViewModel
+    private lateinit var usageAnalyticsStorage: UsageAnalyticsStorage
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_afegir_recepta_formulari)
+
+        usageAnalyticsStorage = UsageAnalyticsStorage(applicationContext)
+
+        lifecycleScope.launch {
+            usageAnalyticsStorage.incrementUsageCount("Afegir")
+        }
 
         recetaViewModel = ViewModelProvider(this)[RecetaViewModel::class.java]
 

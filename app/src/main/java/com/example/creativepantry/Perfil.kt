@@ -16,11 +16,14 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.creativepantry.analytics.UsageAnalyticsStorage
 import com.example.creativepantry.repository.RecetaRepository
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import kotlinx.coroutines.launch
 
 class Perfil : AppCompatActivity() {
 
@@ -30,11 +33,18 @@ class Perfil : AppCompatActivity() {
     private lateinit var toggle: ActionBarDrawerToggle
     private lateinit var toolbar: Toolbar
     private lateinit var recetaViewModel: RecetaViewModel
+    private lateinit var usageAnalyticsStorage: UsageAnalyticsStorage
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_perfil)
+
+        usageAnalyticsStorage = UsageAnalyticsStorage(applicationContext)
+
+        lifecycleScope.launch {
+            usageAnalyticsStorage.incrementUsageCount("Perfil")
+        }
 
         // Botón "Añadir Receta"
         val btnAddRecipe: Button = findViewById(R.id.btnAddRecipe)
