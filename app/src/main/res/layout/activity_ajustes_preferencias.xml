@@ -173,7 +173,16 @@
                     android:thumbTint="#CEBB6A"
                     android:trackTint="@color/verde"
                     tools:ignore="UseSwitchCompatOrMaterialXml" />
+
             </LinearLayout>
+            <Button
+                android:id="@+id/btnGrafic1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver Preferencias"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/verde"
+                android:layout_marginTop="16dp"/>
         </LinearLayout>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
