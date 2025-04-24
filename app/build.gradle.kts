@@ -51,6 +51,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
 
     implementation ("com.github.bumptech.glide:glide:4.15.1")
+    implementation(libs.androidx.junit.ktx)
     annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
 
     implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
@@ -73,4 +74,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
 }
