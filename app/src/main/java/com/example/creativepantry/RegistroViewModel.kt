@@ -1,6 +1,5 @@
 package com.example.creativepantry
 
-import android.util.Patterns
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
@@ -17,9 +16,10 @@ class RegistroViewModel : ViewModel() {
     ) {
         when {
             nombreUsuario.isBlank() -> errorMessage.value = "El nombre de usuario no puede estar vacío"
-            !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> errorMessage.value = "Correo electrónico inválido"
+            email.isBlank() -> errorMessage.value = "El email no puede estar vacío"
+            !Regex("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$").matches(email) -> errorMessage.value = "Correo electrónico inválido"
             password != repetirPassword -> errorMessage.value = "Las contraseñas no coinciden"
-            password.length < 4 -> errorMessage.value = "La contraseña debe tener al menos 4 caracteres"
+            password.length < 4 -> errorMessage.value = "Las contraseñas es demasiado corta"
             else -> {
                 errorMessage.value = null
                 registroCorrecto.value = true
@@ -27,3 +27,4 @@ class RegistroViewModel : ViewModel() {
         }
     }
 }
+

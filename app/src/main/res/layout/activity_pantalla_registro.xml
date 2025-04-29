@@ -100,5 +100,16 @@
             android:fontFamily="@font/asar"
             android:textColor="#FFFFFF"
             android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/txtError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_light"
+            android:visibility="gone"
+            android:textSize="16sp"
+            android:fontFamily="@font/asar"
+            android:layout_marginTop="12dp" />
+
     </LinearLayout>
 </ScrollView>

@@ -1,47 +1,50 @@
 package com.example.creativepantry
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
+import android.widget.*
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.Observer
 
 class PantallaRegistro : AppCompatActivity() {
-    private lateinit var btnRegistro: Button
-    private lateinit var viewModel: RegistroViewModel
+
+    private val viewModel: RegistroViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pantalla_registro)
 
-        viewModel = ViewModelProvider(this)[RegistroViewModel::class.java]
+        val nomUsuari = findViewById<EditText>(R.id.nomUsuari)
+        val correu = findViewById<EditText>(R.id.correu)
+        val contrasenya = findViewById<EditText>(R.id.contrasenya)
+        val repetirContrasenya = findViewById<EditText>(R.id.repetirContrasenya)
+        val btnRegistro = findViewById<Button>(R.id.btnregistro)
+        val txtError = findViewById<TextView>(R.id.txtError)
 
-        btnRegistro = findViewById(R.id.btnregistro)
-        val nombre = findViewById<EditText>(R.id.nomUsuari)
-        val correo = findViewById<EditText>(R.id.correu)
-        val pass = findViewById<EditText>(R.id.contrasenya)
-        val repetirPass = findViewById<EditText>(R.id.repetirContrasenya)
-
-        viewModel.errorMessage.observe(this) { msg ->
-            msg?.let { Toast.makeText(this, it, Toast.LENGTH_SHORT).show() }
-        }
-
-        viewModel.registroCorrecto.observe(this) {
-            if (it) {
-                Toast.makeText(this, "Registrado correctamente", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, PantallaInicioSesion::class.java))
+        // Observa los cambios de errorMessage
+        viewModel.errorMessage.observe(this, Observer { error ->
+            if (error != null) {
+                txtError.text = error
+                txtError.visibility = TextView.VISIBLE
+            } else {
+                txtError.text = ""
+                txtError.visibility = TextView.GONE
             }
-        }
+        })
+
+        // Puedes observar registroCorrecto si necesitas hacer algo más
+        viewModel.registroCorrecto.observe(this, Observer { correcto ->
+            if (correcto == true) {
+                Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
+            }
+        })
 
         btnRegistro.setOnClickListener {
             viewModel.validarCampos(
-                nombre.text.toString(),
-                correo.text.toString(),
-                pass.text.toString(),
-                repetirPass.text.toString()
+                nomUsuari.text.toString(),
+                correu.text.toString(),
+                contrasenya.text.toString(),
+                repetirContrasenya.text.toString()
             )
         }
     }
