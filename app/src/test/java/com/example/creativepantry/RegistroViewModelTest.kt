@@ -8,7 +8,6 @@ import org.junit.Test
 
 class RegistroViewModelTest {
 
-    // Esta regla hace que LiveData se ejecute sincrónicamente
     @get:Rule
     val instantExecutorRule = InstantTaskExecutorRule()
 

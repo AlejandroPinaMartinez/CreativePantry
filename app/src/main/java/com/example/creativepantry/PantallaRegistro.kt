@@ -21,7 +21,7 @@ class PantallaRegistro : AppCompatActivity() {
         val btnRegistro = findViewById<Button>(R.id.btnregistro)
         val txtError = findViewById<TextView>(R.id.txtError)
 
-        // Observa los cambios de errorMessage
+
         viewModel.errorMessage.observe(this, Observer { error ->
             if (error != null) {
                 txtError.text = error
@@ -32,7 +32,7 @@ class PantallaRegistro : AppCompatActivity() {
             }
         })
 
-        // Puedes observar registroCorrecto si necesitas hacer algo más
+
         viewModel.registroCorrecto.observe(this, Observer { correcto ->
             if (correcto == true) {
                 Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
