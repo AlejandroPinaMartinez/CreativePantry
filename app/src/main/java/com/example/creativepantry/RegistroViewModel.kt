@@ -20,6 +20,7 @@ class RegistroViewModel : ViewModel() {
             !Regex("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$").matches(email) -> errorMessage.value = "Correo electrónico inválido"
             password != repetirPassword -> errorMessage.value = "Las contraseñas no coinciden"
             password.length < 4 -> errorMessage.value = "Las contraseñas es demasiado corta"
+            password.length > 100 -> errorMessage.value = "Las contraseñas es demasiado larga"
             else -> {
                 errorMessage.value = null
                 registroCorrecto.value = true

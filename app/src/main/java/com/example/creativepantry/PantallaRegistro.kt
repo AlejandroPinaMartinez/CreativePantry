@@ -21,7 +21,6 @@ class PantallaRegistro : AppCompatActivity() {
         val btnRegistro = findViewById<Button>(R.id.btnregistro)
         val txtError = findViewById<TextView>(R.id.txtError)
 
-
         viewModel.errorMessage.observe(this, Observer { error ->
             if (error != null) {
                 txtError.text = error
@@ -31,7 +30,6 @@ class PantallaRegistro : AppCompatActivity() {
                 txtError.visibility = TextView.GONE
             }
         })
-
 
         viewModel.registroCorrecto.observe(this, Observer { correcto ->
             if (correcto == true) {

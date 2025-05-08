@@ -55,4 +55,38 @@ class RegistroViewModelTest {
         assertEquals("El email no puede estar vacío", viewModel.errorMessage.value)
     }
 
+    @Test
+    fun `nombredeusuarioespacios`() {
+        viewModel.validarCampos("   ", "test@email.com", "1234", "1234")
+        assertEquals("El nombre de usuario no puede estar vacío", viewModel.errorMessage.value)
+    }
+
+    @Test
+    fun `emailconcaracteresespeciales`() {
+        viewModel.validarCampos("usuario", "correo!@mail.com", "1234", "1234")
+        assertEquals("Correo electrónico inválido", viewModel.errorMessage.value)
+    }
+
+    @Test
+    fun `contrasenamuylarga`() {
+        val contrasenaLarga = "a".repeat(101)
+        viewModel.validarCampos("usuario", "test@mail.com", contrasenaLarga, contrasenaLarga)
+        assertEquals("Las contraseñas es demasiado larga", viewModel.errorMessage.value)
+    }
+
+    @Test
+    fun `contrasenavalida`() {
+        viewModel.validarCampos("usuario", "test@mail.com", "abcdef", "abcdef")
+        assertEquals(null, viewModel.errorMessage.value)
+        assertTrue(viewModel.registroCorrecto.value == true)
+    }
+
+    @Test
+    fun `emailvalido`() {
+        viewModel.validarCampos("usuario", "usuario@example.com", "123456", "123456")
+        assertEquals(null, viewModel.errorMessage.value)
+        assertTrue(viewModel.registroCorrecto.value == true)
+    }
+
+
 }
